@@ -337,6 +337,9 @@
   <ItemGroup>
     <None Include="Resources\pngtree-fast-delivery-icon-delivery-icon-png-image_2047531.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
