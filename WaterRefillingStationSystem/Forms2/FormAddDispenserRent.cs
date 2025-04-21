@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WaterRefillingStationSystem.UserControls2
+namespace WaterRefillingStationSystem.Forms2
 {
-    public partial class UC_BorrowedItems : DevExpress.XtraEditors.XtraUserControl
+    public partial class FormAddDispenserRent : DevExpress.XtraEditors.XtraForm
     {
-        public UC_BorrowedItems()
+        public FormAddDispenserRent()
         {
             InitializeComponent();
         }
