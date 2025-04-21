@@ -129,12 +129,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls2\UC_BorrowedItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls2\UC_BorrowedItem.Designer.cs">
-      <DependentUpon>UC_BorrowedItem.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls2\UC_BorrowedItems.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -267,9 +261,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls2\UC_BorrowedItem.resx">
-      <DependentUpon>UC_BorrowedItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls2\UC_BorrowedItems.resx">
       <DependentUpon>UC_BorrowedItems.cs</DependentUpon>
