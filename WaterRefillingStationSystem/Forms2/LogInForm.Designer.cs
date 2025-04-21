@@ -63,6 +63,7 @@
             this.textEditPassword.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.textEditPassword.Properties.Appearance.Options.UseBackColor = true;
             this.textEditPassword.Properties.Appearance.Options.UseFont = true;
+            this.textEditPassword.Properties.PasswordChar = '*';
             this.textEditPassword.Size = new System.Drawing.Size(216, 38);
             this.textEditPassword.TabIndex = 1;
             // 
