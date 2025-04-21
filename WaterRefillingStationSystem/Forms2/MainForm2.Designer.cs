@@ -46,7 +46,7 @@
             this.aciBorrowedItems = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator3 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.aciDailySalesReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aciSalesReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciInventoryReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciCustomerReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator4 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
@@ -210,7 +210,7 @@
             // accordionControlElement12
             // 
             this.accordionControlElement12.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.aciDailySalesReport,
+            this.aciSalesReport,
             this.aciInventoryReport,
             this.aciCustomerReport});
             this.accordionControlElement12.Expanded = true;
@@ -218,11 +218,11 @@
             this.accordionControlElement12.Name = "accordionControlElement12";
             this.accordionControlElement12.Text = "Reports";
             // 
-            // aciDailySalesReport
+            // aciSalesReport
             // 
-            this.aciDailySalesReport.Name = "aciDailySalesReport";
-            this.aciDailySalesReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.aciDailySalesReport.Text = "Daily Sales Report";
+            this.aciSalesReport.Name = "aciSalesReport";
+            this.aciSalesReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aciSalesReport.Text = "Sales Report";
             // 
             // aciInventoryReport
             // 
@@ -309,7 +309,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement aciAddNewCustomer;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator3;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement aciDailySalesReport;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aciSalesReport;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aciInventoryReport;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aciCustomerReport;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator4;
