@@ -12,6 +12,13 @@ namespace WaterRefillingStationSystem.Models
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
+        public string FullName 
+        {
+            get
+            {
+                return $"{FirstName} {MiddleName} {LastName}";
+            } 
+        }
         public string ContactNumber { get; set; }
         public string Address { get; set; }
         public int Debt { get; set; }
