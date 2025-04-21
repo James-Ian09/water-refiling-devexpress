@@ -1,0 +1,344 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C3DC239-6B90-4E35-96AE-FACDBB2E3734}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WaterRefillingStationSystem</RootNamespace>
+    <AssemblyName>WaterRefillingStationSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v23.2" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2" />
+    <Reference Include="DevExpress.Data.v23.2" />
+    <Reference Include="DevExpress.Images.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.2" />
+    <Reference Include="DevExpress.Sparkline.v23.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.2" />
+    <Reference Include="DevExpress.Printing.v23.2.Core" />
+    <Reference Include="DevExpress.Drawing.v23.2" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core.Desktop, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms2\FormAddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms2\FormAddNewCustomer.Designer.cs">
+      <DependentUpon>FormAddNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms2\FormAddNewItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms2\FormAddNewItem.Designer.cs">
+      <DependentUpon>FormAddNewItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms2\FormCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms2\FormCustomerList.Designer.cs">
+      <DependentUpon>FormCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms2\FormStockManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms2\FormStockManager.Designer.cs">
+      <DependentUpon>FormStockManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms2\FormViewDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms2\FormViewDetails.Designer.cs">
+      <DependentUpon>FormViewDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms2\FormWalkin-ForDeliveryButtons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms2\FormWalkin-ForDeliveryButtons.Designer.cs">
+      <DependentUpon>FormWalkin-ForDeliveryButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms2\LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms2\LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms2\MainForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms2\MainForm2.Designer.cs">
+      <DependentUpon>MainForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls2\UC_BorrowedItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls2\UC_BorrowedItem.Designer.cs">
+      <DependentUpon>UC_BorrowedItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls2\UC_BorrowedItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls2\UC_BorrowedItems.Designer.cs">
+      <DependentUpon>UC_BorrowedItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls2\UC_CustomerDebt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls2\UC_CustomerDebt.Designer.cs">
+      <DependentUpon>UC_CustomerDebt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls2\UC_StationSupplies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls2\UC_StationSupplies.Designer.cs">
+      <DependentUpon>UC_StationSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms2\FormNewSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms2\FormNewSale.Designer.cs">
+      <DependentUpon>FormNewSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls2\UC_PendingOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls2\UC_PendingOrders.Designer.cs">
+      <DependentUpon>UC_PendingOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls2\UC_TransactionHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls2\UC_TransactionHistory.Designer.cs">
+      <DependentUpon>UC_TransactionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Customer_Borrower.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Customer_Borrower.Designer.cs">
+      <DependentUpon>UC_Customer_Borrower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Customer_CustomerInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Customer_CustomerInformation.Designer.cs">
+      <DependentUpon>UC_Customer_CustomerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Delivery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Delivery.Designer.cs">
+      <DependentUpon>UC_Delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_History.Designer.cs">
+      <DependentUpon>UC_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_POS_NewCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_POS_NewCustomer.Designer.cs">
+      <DependentUpon>UC_POS_NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_POS_POS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_POS_POS.Designer.cs">
+      <DependentUpon>UC_POS_POS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Customer.Designer.cs">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_AdminPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_AdminPanel.Designer.cs">
+      <DependentUpon>UC_AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_POS_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_POS_Customer.Designer.cs">
+      <DependentUpon>UC_POS_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_TaskCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_TaskCalendar.Designer.cs">
+      <DependentUpon>UC_TaskCalendar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms2\FormAddNewCustomer.resx">
+      <DependentUpon>FormAddNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms2\FormAddNewItem.resx">
+      <DependentUpon>FormAddNewItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms2\FormCustomerList.resx">
+      <DependentUpon>FormCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms2\FormStockManager.resx">
+      <DependentUpon>FormStockManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms2\FormViewDetails.resx">
+      <DependentUpon>FormViewDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms2\FormWalkin-ForDeliveryButtons.resx">
+      <DependentUpon>FormWalkin-ForDeliveryButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms2\LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms2\MainForm2.resx">
+      <DependentUpon>MainForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls2\UC_BorrowedItem.resx">
+      <DependentUpon>UC_BorrowedItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls2\UC_BorrowedItems.resx">
+      <DependentUpon>UC_BorrowedItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls2\UC_CustomerDebt.resx">
+      <DependentUpon>UC_CustomerDebt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls2\UC_StationSupplies.resx">
+      <DependentUpon>UC_StationSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms2\FormNewSale.resx">
+      <DependentUpon>FormNewSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls2\UC_PendingOrders.resx">
+      <DependentUpon>UC_PendingOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls2\UC_TransactionHistory.resx">
+      <DependentUpon>UC_TransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Customer_Borrower.resx">
+      <DependentUpon>UC_Customer_Borrower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Customer_CustomerInformation.resx">
+      <DependentUpon>UC_Customer_CustomerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Delivery.resx">
+      <DependentUpon>UC_Delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_History.resx">
+      <DependentUpon>UC_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_POS_NewCustomer.resx">
+      <DependentUpon>UC_POS_NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_POS_POS.resx">
+      <DependentUpon>UC_POS_POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Customer.resx">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_AdminPanel.resx">
+      <DependentUpon>UC_AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_POS_Customer.resx">
+      <DependentUpon>UC_POS_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_TaskCalendar.resx">
+      <DependentUpon>UC_TaskCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-fast-delivery-icon-delivery-icon-png-image_2047531.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
