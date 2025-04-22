@@ -215,6 +215,7 @@
             this.aciSalesReport.Name = "aciSalesReport";
             this.aciSalesReport.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aciSalesReport.Text = "Sales Report";
+            this.aciSalesReport.Click += new System.EventHandler(this.aciSalesReport_Click);
             // 
             // aciInventoryReport
             // 

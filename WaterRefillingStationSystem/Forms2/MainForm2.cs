@@ -49,5 +49,9 @@ namespace WaterRefillingStationSystem.Forms
             uC_StationSupplies.Dock = DockStyle.Fill;
             panelBody.Controls.Add(uC_StationSupplies);
         }
+
+        private void aciSalesReport_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
