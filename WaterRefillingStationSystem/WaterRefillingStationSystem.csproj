@@ -159,8 +159,7 @@
       <DependentUpon>MainForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Customers.cs" />
-    <Compile Include="Models\ItemDetails.cs" />
-    <Compile Include="Models\OrderTypes.cs" />
+    <Compile Include="Models\SalesReport.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\ItemNames.cs" />
     <Compile Include="Program.cs" />
@@ -169,6 +168,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_Sales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_Sales.Designer.cs">
+      <DependentUpon>Report_Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls2\UC_RentedDispensers.cs">
       <SubType>UserControl</SubType>
@@ -305,6 +310,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_Sales.resx">
+      <DependentUpon>Report_Sales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls2\UC_RentedDispensers.resx">
       <DependentUpon>UC_RentedDispensers.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,9 +379,7 @@
   <ItemGroup>
     <None Include="Resources\pngtree-fast-delivery-icon-delivery-icon-png-image_2047531.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reports\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
