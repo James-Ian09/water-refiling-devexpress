@@ -1,25 +1,21 @@
-﻿using DevExpress.XtraEditors;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.Data;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace WaterRefillingStationSystem.Forms2
 {
-    public partial class FormViewDetails : DevExpress.XtraEditors.XtraForm
-    {
-        public FormViewDetails()
-        {
+	public partial class XtraUserControl1: DevExpress.XtraEditors.XtraUserControl
+	{
+        public XtraUserControl1()
+		{
             InitializeComponent();
-        }
-
-            
-
-
-    }
+		}
+	}
 }

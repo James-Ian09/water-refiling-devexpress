@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using WaterRefillingStationSystem.Forms;
+using WaterRefillingStationSystem.Forms2;
 
 namespace WaterRefillingStationSystem
 {
@@ -19,7 +20,7 @@ namespace WaterRefillingStationSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogInForm());
+            Application.Run(new FormLogIn());
         }
     }
 }
