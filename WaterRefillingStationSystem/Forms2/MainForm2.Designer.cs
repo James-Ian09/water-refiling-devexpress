@@ -89,7 +89,7 @@
             this.POStab});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.Size = new System.Drawing.Size(310, 716);
+            this.accordionControl1.Size = new System.Drawing.Size(294, 716);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -264,10 +264,12 @@
             // 
             // panelBody
             // 
+            this.panelBody.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panelBody.Appearance.Options.UseBackColor = true;
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBody.Location = new System.Drawing.Point(310, 0);
+            this.panelBody.Location = new System.Drawing.Point(294, 0);
             this.panelBody.Name = "panelBody";
-            this.panelBody.Size = new System.Drawing.Size(849, 716);
+            this.panelBody.Size = new System.Drawing.Size(865, 716);
             this.panelBody.TabIndex = 1;
             // 
             // MainForm2
