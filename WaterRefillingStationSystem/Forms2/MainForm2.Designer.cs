@@ -34,7 +34,6 @@
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciNewSale = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciPendingOrders = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.aciTransactionHistory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciStationSupplies = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -114,7 +113,6 @@
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aciNewSale,
             this.aciPendingOrders,
-            this.aciTransactionHistory,
             this.accordionControlSeparator1});
             this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
@@ -134,13 +132,6 @@
             this.aciPendingOrders.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aciPendingOrders.Text = "Pending Orders";
             this.aciPendingOrders.Click += new System.EventHandler(this.aciPendingOrders_Click);
-            // 
-            // aciTransactionHistory
-            // 
-            this.aciTransactionHistory.Name = "aciTransactionHistory";
-            this.aciTransactionHistory.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.aciTransactionHistory.Text = "Transaction History";
-            this.aciTransactionHistory.Click += new System.EventHandler(this.aciTransactionHistory_Click);
             // 
             // accordionControlSeparator1
             // 
@@ -286,6 +277,7 @@
             this.Controls.Add(this.accordionControl1);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("MainForm2.IconOptions.Image")));
             this.Name = "MainForm2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm2";
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelBody)).EndInit();
@@ -299,7 +291,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement POStab;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aciNewSale;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement aciTransactionHistory;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aciPendingOrders;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;

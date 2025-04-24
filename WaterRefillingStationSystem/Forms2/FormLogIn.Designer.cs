@@ -37,7 +37,7 @@
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonLogIn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -98,7 +98,7 @@
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(189, 30);
+            this.textEdit1.Size = new System.Drawing.Size(189, 42);
             this.textEdit1.TabIndex = 4;
             // 
             // textEdit2
@@ -109,7 +109,7 @@
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(189, 30);
+            this.textEdit2.Size = new System.Drawing.Size(189, 42);
             this.textEdit2.TabIndex = 5;
             // 
             // textEdit3
@@ -120,7 +120,7 @@
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(189, 30);
+            this.textEdit3.Size = new System.Drawing.Size(189, 42);
             this.textEdit3.TabIndex = 4;
             // 
             // textEdit4
@@ -131,16 +131,17 @@
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textEdit4.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(189, 30);
+            this.textEdit4.Size = new System.Drawing.Size(189, 42);
             this.textEdit4.TabIndex = 5;
             // 
-            // simpleButton1
+            // simpleButtonLogIn
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(689, 383);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "Click Me";
+            this.simpleButtonLogIn.Location = new System.Drawing.Point(689, 383);
+            this.simpleButtonLogIn.Name = "simpleButtonLogIn";
+            this.simpleButtonLogIn.Size = new System.Drawing.Size(94, 29);
+            this.simpleButtonLogIn.TabIndex = 6;
+            this.simpleButtonLogIn.Text = "Click Me";
+            this.simpleButtonLogIn.Click += new System.EventHandler(this.simpleButtonLogIn_Click);
             // 
             // FormLogIn
             // 
@@ -149,7 +150,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 459);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.simpleButtonLogIn);
             this.Controls.Add(this.textEdit4);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.textEdit3);
@@ -159,6 +160,7 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormLogIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogInFormcs";
             this.Load += new System.EventHandler(this.FormLogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -182,6 +184,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonLogIn;
     }
 }

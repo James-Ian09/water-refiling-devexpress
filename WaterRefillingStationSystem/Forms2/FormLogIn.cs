@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using WaterRefillingStationSystem.Forms;
 
 namespace WaterRefillingStationSystem.Forms2
 {
@@ -21,6 +22,13 @@ namespace WaterRefillingStationSystem.Forms2
         private void FormLogIn_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void simpleButtonLogIn_Click(object sender, EventArgs e)
+        {
+            MainForm2 mainForm2 = new MainForm2();
+            mainForm2.ShowDialog();
+            this.Hide();
         }
     }
 }
