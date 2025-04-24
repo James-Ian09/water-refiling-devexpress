@@ -179,6 +179,11 @@
             // 
             // aciCustomerList
             // 
+            this.aciCustomerList.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
             this.aciCustomerList.Name = "aciCustomerList";
             this.aciCustomerList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aciCustomerList.Text = "Customer List";
