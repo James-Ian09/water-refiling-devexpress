@@ -88,7 +88,7 @@
             this.POStab});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.Size = new System.Drawing.Size(294, 716);
+            this.accordionControl1.Size = new System.Drawing.Size(294, 714);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -265,14 +265,14 @@
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBody.Location = new System.Drawing.Point(294, 0);
             this.panelBody.Name = "panelBody";
-            this.panelBody.Size = new System.Drawing.Size(865, 716);
+            this.panelBody.Size = new System.Drawing.Size(865, 714);
             this.panelBody.TabIndex = 1;
             // 
             // MainForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 716);
+            this.ClientSize = new System.Drawing.Size(1159, 714);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.accordionControl1);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("MainForm2.IconOptions.Image")));
