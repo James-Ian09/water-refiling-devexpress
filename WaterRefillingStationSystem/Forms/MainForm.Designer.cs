@@ -36,12 +36,12 @@
             this.aciPOS = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciNewCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.aciReturn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciCustomerList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciCustomerInformation = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aciBorrower = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aciReturn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.acgDelivery = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.acgAdminPanel = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.acgHistory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -64,7 +64,7 @@
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBody.Location = new System.Drawing.Point(270, 0);
             this.panelBody.Name = "panelBody";
-            this.panelBody.Size = new System.Drawing.Size(867, 670);
+            this.panelBody.Size = new System.Drawing.Size(867, 672);
             this.panelBody.TabIndex = 9;
             // 
             // acgMenu
@@ -116,13 +116,6 @@
             this.aciNewCustomer.Text = "New Customer";
             this.aciNewCustomer.Click += new System.EventHandler(this.aciNewCustomer_Click);
             // 
-            // aciReturn
-            // 
-            this.aciReturn.Name = "aciReturn";
-            this.aciReturn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.aciReturn.Text = "Return";
-            this.aciReturn.Click += new System.EventHandler(this.aciReturn_Click);
-            // 
             // aciOrder
             // 
             this.aciOrder.Name = "aciOrder";
@@ -162,6 +155,13 @@
             this.aciBorrower.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aciBorrower.Text = "Borrower";
             this.aciBorrower.Click += new System.EventHandler(this.aciBorrower_Click);
+            // 
+            // aciReturn
+            // 
+            this.aciReturn.Name = "aciReturn";
+            this.aciReturn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aciReturn.Text = "Return";
+            this.aciReturn.Click += new System.EventHandler(this.aciReturn_Click);
             // 
             // acgDelivery
             // 
@@ -222,7 +222,7 @@
             this.acgMenu});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.Size = new System.Drawing.Size(270, 670);
+            this.accordionControl1.Size = new System.Drawing.Size(270, 672);
             this.accordionControl1.TabIndex = 8;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -230,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1137, 670);
+            this.ClientSize = new System.Drawing.Size(1137, 672);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.accordionControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

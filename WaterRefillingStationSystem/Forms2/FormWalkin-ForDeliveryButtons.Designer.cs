@@ -92,7 +92,7 @@
             this.btnCancel.AppearancePressed.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.btnCancel.AppearancePressed.Options.UseFont = true;
             this.btnCancel.AppearancePressed.Options.UseForeColor = true;
-            this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
             this.btnCancel.Location = new System.Drawing.Point(125, 303);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(162, 46);
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 418);
+            this.ClientSize = new System.Drawing.Size(427, 420);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnForDelivery);
             this.Controls.Add(this.btnWalkin);
