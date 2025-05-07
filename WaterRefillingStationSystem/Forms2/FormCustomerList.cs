@@ -35,23 +35,39 @@ namespace WaterRefillingStationSystem.Forms2
         {
             try
             {
-                var customersData = _customerRepository.GetAllCustomers();
+                List<Customers> customersData = _customerRepository.GetAllCustomers();
+                List<object> processedData = new List<object>();
 
-                var processedData = customersData.Select(c => new
+                foreach (var c in customersData)
                 {
-                    c.CustomerID,
-                    Name = string.IsNullOrWhiteSpace(c.MiddleName)
-                            ? $"{c.FirstName} {c.LastName}"
-                            : $"{c.FirstName} {c.MiddleName} {c.LastName}",
-                    c.ContactNumber,
-                    c.Address
-                }).ToList();
+                    string fullName;
 
+                    //If MiddleName is empty, only use FirstName + LastName
+                    if (string.IsNullOrWhiteSpace(c.MiddleName))
+                    {
+                        fullName = c.FirstName + " " + c.LastName;
+                    }
+                    else //Otherwise, use FirstName + MiddleName + LastName
+                    {
+                        fullName = c.FirstName + " " + c.MiddleName + " " + c.LastName;
+                    }
+
+                    //Store the processed customer data in a list
+                    processedData.Add(new
+                    {
+                        CustomerID = c.CustomerID,
+                        Name = fullName,
+                        ContactNumber = c.ContactNumber,
+                        Address = c.Address
+                    });
+                }
+
+                //Assign the processed data to the grid
                 gridControlCustomerList.DataSource = processedData;
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show($"Error loading customers: {ex.Message}");
+                XtraMessageBox.Show("Error loading customers: " + ex.Message);
             }
         }
 
