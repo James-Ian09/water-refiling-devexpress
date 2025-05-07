@@ -131,16 +131,33 @@
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textEdit4.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
+            this.textEdit4.Properties.PasswordChar = '*';
             this.textEdit4.Size = new System.Drawing.Size(189, 42);
             this.textEdit4.TabIndex = 5;
             // 
             // simpleButtonLogIn
             // 
-            this.simpleButtonLogIn.Location = new System.Drawing.Point(689, 383);
+            this.simpleButtonLogIn.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonLogIn.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButtonLogIn.Appearance.Options.UseFont = true;
+            this.simpleButtonLogIn.Appearance.Options.UseForeColor = true;
+            this.simpleButtonLogIn.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
+            this.simpleButtonLogIn.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.simpleButtonLogIn.AppearanceHovered.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButtonLogIn.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButtonLogIn.AppearanceHovered.Options.UseFont = true;
+            this.simpleButtonLogIn.AppearanceHovered.Options.UseForeColor = true;
+            this.simpleButtonLogIn.AppearancePressed.BackColor = System.Drawing.Color.Gray;
+            this.simpleButtonLogIn.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.simpleButtonLogIn.AppearancePressed.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButtonLogIn.AppearancePressed.Options.UseBackColor = true;
+            this.simpleButtonLogIn.AppearancePressed.Options.UseFont = true;
+            this.simpleButtonLogIn.AppearancePressed.Options.UseForeColor = true;
+            this.simpleButtonLogIn.Location = new System.Drawing.Point(667, 383);
             this.simpleButtonLogIn.Name = "simpleButtonLogIn";
-            this.simpleButtonLogIn.Size = new System.Drawing.Size(94, 29);
+            this.simpleButtonLogIn.Size = new System.Drawing.Size(125, 29);
             this.simpleButtonLogIn.TabIndex = 6;
-            this.simpleButtonLogIn.Text = "Click Me";
+            this.simpleButtonLogIn.Text = "Login";
             this.simpleButtonLogIn.Click += new System.EventHandler(this.simpleButtonLogIn_Click);
             // 
             // FormLogIn

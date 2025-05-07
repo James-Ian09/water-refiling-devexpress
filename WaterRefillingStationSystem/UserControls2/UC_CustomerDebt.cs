@@ -1,21 +1,81 @@
 ﻿using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WaterRefillingStationSystem.Interfaces;
+using WaterRefillingStationSystem.Models;
 
 namespace WaterRefillingStationSystem.UserControls2
 {
     public partial class UC_CustomerDebt : DevExpress.XtraEditors.XtraUserControl
     {
-        public UC_CustomerDebt()
+        private readonly ICustomerDebtRepository _customerDebtRepository;
+        private readonly ISaleRepository _saleRepository;
+
+        public UC_CustomerDebt(ICustomerDebtRepository customerDebtRepository, ISaleRepository saleRepository)
         {
             InitializeComponent();
+            _customerDebtRepository = customerDebtRepository;
+            _saleRepository = saleRepository;
+        }
+
+        private void simpleButtonPaid_Click(object sender, EventArgs e)
+        {
+            if (gridControlCustomerDebt.MainView is DevExpress.XtraGrid.Views.Grid.GridView gridView)
+            {
+                if (gridView.SelectedRowsCount == 0)
+                {
+                    XtraMessageBox.Show("Please select a debt record to mark as paid.");
+                    return;
+                }
+
+                // ✅ Retrieve selected debt record from the grid
+                CustomerDebt selectedDebt = new CustomerDebt
+                {
+                    Name = gridView.GetFocusedRowCellValue("Name").ToString(), // ✅ Name will NOT be saved in SalesDetails
+                    OrderType = gridView.GetFocusedRowCellValue("OrderType").ToString(),
+                    ItemName = gridView.GetFocusedRowCellValue("ItemName").ToString(),
+                    Quantity = Convert.ToInt32(gridView.GetFocusedRowCellValue("Quantity")),
+                    UnitPrice = Convert.ToInt32(gridView.GetFocusedRowCellValue("UnitPrice")),
+                    OrderDate = Convert.ToString(gridView.GetFocusedRowCellValue("OrderDate")),
+                    Debt = Convert.ToInt32(gridView.GetFocusedRowCellValue("Debt"))
+                };
+
+                // ✅ Step 1: Move debt record to `SalesDetails`, excluding `Name`
+                SalesDetails newSale = new SalesDetails
+                {
+                    OrderType = selectedDebt.OrderType,
+                    ItemName = selectedDebt.ItemName,
+                    Quantity = selectedDebt.Quantity,
+                    UnitPrice = selectedDebt.UnitPrice,
+                    TotalPrice = selectedDebt.Debt, // ✅ Debt now becomes TotalPrice
+                    OrderDate = DateTime.TryParse(selectedDebt.OrderDate, out DateTime parsedDate) ? parsedDate : DateTime.MinValue
+                };
+
+                _saleRepository.AddSale(
+                    newSale.OrderType,
+                    newSale.ItemName,
+                    newSale.Quantity,
+                    newSale.UnitPrice,
+                    newSale.TotalPrice,
+                    null, // ✅ No debt anymore
+                    newSale.OrderDate
+                );
+
+                // ✅ Step 2: Remove the record from CustomerDebt **using Name instead of DebtID**
+                _customerDebtRepository.RemoveDebtRecord(selectedDebt.Name, DateTime.ParseExact(selectedDebt.OrderDate, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture));
+
+                XtraMessageBox.Show($"Payment recorded for {selectedDebt.Name}. Debt moved to SalesDetails.");
+
+                // ✅ Step 3: Refresh the grid to reflect changes
+                RefreshDebtGrid();
+            }
+        }
+
+        private void RefreshDebtGrid()
+        {
+            gridControlCustomerDebt.DataSource = _customerDebtRepository.GetAllDebtRecords();
+            gridControlCustomerDebt.RefreshDataSource();
         }
     }
 }

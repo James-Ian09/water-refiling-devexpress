@@ -57,6 +57,7 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -80,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -102,7 +104,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(26, 26);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.TabPageSupplyManagement;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1153, 706);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1143, 706);
             this.xtraTabControl1.TabIndex = 4;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageSupplyManagement,
@@ -114,7 +116,7 @@
             this.TabPageSupplyManagement.Appearance.Header.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.TabPageSupplyManagement.Controls.Add(this.layoutControl2);
             this.TabPageSupplyManagement.Name = "TabPageSupplyManagement";
-            this.TabPageSupplyManagement.Size = new System.Drawing.Size(1151, 668);
+            this.TabPageSupplyManagement.Size = new System.Drawing.Size(1141, 668);
             this.TabPageSupplyManagement.Text = "                         Supply Management                         ";
             // 
             // layoutControl2
@@ -126,7 +128,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(1151, 668);
+            this.layoutControl2.Size = new System.Drawing.Size(1141, 668);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -151,7 +153,7 @@
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
             this.simpleButton2.Location = new System.Drawing.Point(16, 614);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(158, 38);
+            this.simpleButton2.Size = new System.Drawing.Size(157, 38);
             this.simpleButton2.StyleController = this.layoutControl2;
             this.simpleButton2.TabIndex = 7;
             this.simpleButton2.Text = "Add New Item";
@@ -175,9 +177,9 @@
             this.simpleButton1.AppearancePressed.Options.UseFont = true;
             this.simpleButton1.AppearancePressed.Options.UseForeColor = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(973, 614);
+            this.simpleButton1.Location = new System.Drawing.Point(964, 614);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(162, 38);
+            this.simpleButton1.Size = new System.Drawing.Size(161, 38);
             this.simpleButton1.StyleController = this.layoutControl2;
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "Manage Stocks";
@@ -187,7 +189,7 @@
             this.gridControl2.Location = new System.Drawing.Point(16, 16);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1119, 592);
+            this.gridControl2.Size = new System.Drawing.Size(1109, 592);
             this.gridControl2.TabIndex = 4;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -242,7 +244,7 @@
             this.emptySpaceItem1,
             this.layoutControlItem4});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1151, 668);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1141, 668);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -250,7 +252,7 @@
             this.layoutControlItem2.Control = this.gridControl2;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1125, 598);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1115, 598);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -259,24 +261,24 @@
             this.layoutControlItem5.Control = this.simpleButton2;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 598);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(164, 44);
+            this.layoutControlItem5.Size = new System.Drawing.Size(163, 44);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(164, 598);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(163, 598);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(793, 44);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(785, 44);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.simpleButton1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(957, 598);
+            this.layoutControlItem4.Location = new System.Drawing.Point(948, 598);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(168, 44);
+            this.layoutControlItem4.Size = new System.Drawing.Size(167, 44);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -284,7 +286,7 @@
             // 
             this.TabPageContainerSalesRecords.Controls.Add(this.layoutControl3);
             this.TabPageContainerSalesRecords.Name = "TabPageContainerSalesRecords";
-            this.TabPageContainerSalesRecords.Size = new System.Drawing.Size(1157, 675);
+            this.TabPageContainerSalesRecords.Size = new System.Drawing.Size(1141, 668);
             this.TabPageContainerSalesRecords.Text = "                      Container Sales Records                       ";
             // 
             // layoutControl3
@@ -294,7 +296,7 @@
             this.layoutControl3.Location = new System.Drawing.Point(0, 0);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup2;
-            this.layoutControl3.Size = new System.Drawing.Size(1157, 675);
+            this.layoutControl3.Size = new System.Drawing.Size(1141, 668);
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -303,7 +305,7 @@
             this.gridControl1.Location = new System.Drawing.Point(16, 16);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1125, 643);
+            this.gridControl1.Size = new System.Drawing.Size(1109, 636);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -365,7 +367,7 @@
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem9});
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1157, 675);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1141, 668);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem9
@@ -373,7 +375,7 @@
             this.layoutControlItem9.Control = this.gridControl1;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(1131, 649);
+            this.layoutControlItem9.Size = new System.Drawing.Size(1115, 642);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
@@ -382,7 +384,8 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.emptySpaceItem2});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1205, 758);
             this.Root.TextVisible = false;
@@ -393,9 +396,17 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(13, 13, 13, 13);
-            this.layoutControlItem1.Size = new System.Drawing.Size(1179, 732);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1169, 732);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(1169, 0);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(10, 732);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // UC_StationSupplies
             // 
@@ -427,6 +438,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,5 +473,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }

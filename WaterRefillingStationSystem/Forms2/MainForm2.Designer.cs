@@ -88,7 +88,7 @@
             this.POStab});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.Size = new System.Drawing.Size(294, 714);
+            this.accordionControl1.Size = new System.Drawing.Size(301, 714);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -178,18 +178,21 @@
             this.aciCustomerList.Name = "aciCustomerList";
             this.aciCustomerList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aciCustomerList.Text = "Customer List";
+            this.aciCustomerList.Click += new System.EventHandler(this.aciCustomerList_Click);
             // 
             // aciCustomerDebt
             // 
             this.aciCustomerDebt.Name = "aciCustomerDebt";
             this.aciCustomerDebt.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aciCustomerDebt.Text = "Customer Debt";
+            this.aciCustomerDebt.Click += new System.EventHandler(this.aciCustomerDebt_Click);
             // 
             // aciRentedDispensers
             // 
             this.aciRentedDispensers.Name = "aciRentedDispensers";
             this.aciRentedDispensers.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aciRentedDispensers.Text = "Rented Dispensers";
+            this.aciRentedDispensers.Click += new System.EventHandler(this.aciRentedDispensers_Click);
             // 
             // accordionControlSeparator3
             // 
@@ -263,9 +266,9 @@
             this.panelBody.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panelBody.Appearance.Options.UseBackColor = true;
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBody.Location = new System.Drawing.Point(294, 0);
+            this.panelBody.Location = new System.Drawing.Point(301, 0);
             this.panelBody.Name = "panelBody";
-            this.panelBody.Size = new System.Drawing.Size(865, 714);
+            this.panelBody.Size = new System.Drawing.Size(858, 714);
             this.panelBody.TabIndex = 1;
             // 
             // MainForm2
