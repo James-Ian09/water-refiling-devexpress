@@ -44,9 +44,7 @@
             this.spinEditQuantity = new DevExpress.XtraEditors.SpinEdit();
             this.comboBoxEditItemName = new DevExpress.XtraEditors.ComboBoxEdit();
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem27 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem19 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem34 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -56,16 +54,18 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem24 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -80,9 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.spinEditQuantity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditItemName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
@@ -92,16 +90,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // Root
@@ -142,14 +142,16 @@
             this.layoutControlItem2.Control = this.simpleButtonAddNewCustomer;
             this.layoutControlItem2.Location = new System.Drawing.Point(335, 152);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(219, 44);
+            this.layoutControlItem2.Size = new System.Drawing.Size(219, 50);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // simpleButtonAddNewCustomer
             // 
+            this.simpleButtonAddNewCustomer.Appearance.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.simpleButtonAddNewCustomer.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButtonAddNewCustomer.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.simpleButtonAddNewCustomer.Appearance.Options.UseBackColor = true;
             this.simpleButtonAddNewCustomer.Appearance.Options.UseFont = true;
             this.simpleButtonAddNewCustomer.Appearance.Options.UseForeColor = true;
             this.simpleButtonAddNewCustomer.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
@@ -168,7 +170,8 @@
             this.simpleButtonAddNewCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonAddNewCustomer.ImageOptions.Image")));
             this.simpleButtonAddNewCustomer.Location = new System.Drawing.Point(351, 168);
             this.simpleButtonAddNewCustomer.Name = "simpleButtonAddNewCustomer";
-            this.simpleButtonAddNewCustomer.Size = new System.Drawing.Size(213, 38);
+            this.simpleButtonAddNewCustomer.Padding = new System.Windows.Forms.Padding(3);
+            this.simpleButtonAddNewCustomer.Size = new System.Drawing.Size(213, 44);
             this.simpleButtonAddNewCustomer.StyleController = this.layoutControl1;
             this.simpleButtonAddNewCustomer.TabIndex = 5;
             this.simpleButtonAddNewCustomer.Text = "Add New Customer";
@@ -213,7 +216,9 @@
             this.checkEditListInCustomerDebt.Location = new System.Drawing.Point(16, 158);
             this.checkEditListInCustomerDebt.Name = "checkEditListInCustomerDebt";
             this.checkEditListInCustomerDebt.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEditListInCustomerDebt.Properties.Appearance.ForeColor = System.Drawing.Color.SlateGray;
             this.checkEditListInCustomerDebt.Properties.Appearance.Options.UseFont = true;
+            this.checkEditListInCustomerDebt.Properties.Appearance.Options.UseForeColor = true;
             this.checkEditListInCustomerDebt.Properties.Caption = "List in Customer Debt";
             this.checkEditListInCustomerDebt.Size = new System.Drawing.Size(265, 26);
             this.checkEditListInCustomerDebt.StyleController = this.layoutControl1;
@@ -224,7 +229,7 @@
             // 
             this.comboBoxEditSelectOption.Location = new System.Drawing.Point(16, 114);
             this.comboBoxEditSelectOption.Name = "comboBoxEditSelectOption";
-            this.comboBoxEditSelectOption.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxEditSelectOption.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.comboBoxEditSelectOption.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditSelectOption.Properties.Appearance.Options.UseBackColor = true;
             this.comboBoxEditSelectOption.Properties.Appearance.Options.UseFont = true;
@@ -243,7 +248,7 @@
             this.comboBoxEditSelectCustomer.Enabled = false;
             this.comboBoxEditSelectCustomer.Location = new System.Drawing.Point(287, 114);
             this.comboBoxEditSelectCustomer.Name = "comboBoxEditSelectCustomer";
-            this.comboBoxEditSelectCustomer.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxEditSelectCustomer.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.comboBoxEditSelectCustomer.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditSelectCustomer.Properties.Appearance.Options.UseBackColor = true;
             this.comboBoxEditSelectCustomer.Properties.Appearance.Options.UseFont = true;
@@ -257,7 +262,7 @@
             // 
             this.textEditUnitPrice.Location = new System.Drawing.Point(59, 301);
             this.textEditUnitPrice.Name = "textEditUnitPrice";
-            this.textEditUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textEditUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEditUnitPrice.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEditUnitPrice.Properties.Appearance.Options.UseBackColor = true;
             this.textEditUnitPrice.Properties.Appearance.Options.UseFont = true;
@@ -267,8 +272,10 @@
             // 
             // simpleButtonCancel
             // 
+            this.simpleButtonCancel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
             this.simpleButtonCancel.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButtonCancel.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButtonCancel.Appearance.Options.UseBackColor = true;
             this.simpleButtonCancel.Appearance.Options.UseFont = true;
             this.simpleButtonCancel.Appearance.Options.UseForeColor = true;
             this.simpleButtonCancel.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
@@ -284,9 +291,10 @@
             this.simpleButtonCancel.AppearancePressed.Options.UseFont = true;
             this.simpleButtonCancel.AppearancePressed.Options.UseForeColor = true;
             this.simpleButtonCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonCancel.ImageOptions.Image")));
-            this.simpleButtonCancel.Location = new System.Drawing.Point(383, 449);
+            this.simpleButtonCancel.Location = new System.Drawing.Point(383, 439);
             this.simpleButtonCancel.Name = "simpleButtonCancel";
-            this.simpleButtonCancel.Size = new System.Drawing.Size(156, 38);
+            this.simpleButtonCancel.Padding = new System.Windows.Forms.Padding(5);
+            this.simpleButtonCancel.Size = new System.Drawing.Size(156, 48);
             this.simpleButtonCancel.StyleController = this.layoutControl1;
             this.simpleButtonCancel.TabIndex = 17;
             this.simpleButtonCancel.Text = "Cancel";
@@ -294,8 +302,10 @@
             // 
             // simpleButtonSubmit
             // 
+            this.simpleButtonSubmit.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
             this.simpleButtonSubmit.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButtonSubmit.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButtonSubmit.Appearance.Options.UseBackColor = true;
             this.simpleButtonSubmit.Appearance.Options.UseFont = true;
             this.simpleButtonSubmit.Appearance.Options.UseForeColor = true;
             this.simpleButtonSubmit.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
@@ -311,9 +321,10 @@
             this.simpleButtonSubmit.AppearancePressed.Options.UseFont = true;
             this.simpleButtonSubmit.AppearancePressed.Options.UseForeColor = true;
             this.simpleButtonSubmit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonSubmit.ImageOptions.Image")));
-            this.simpleButtonSubmit.Location = new System.Drawing.Point(383, 405);
+            this.simpleButtonSubmit.Location = new System.Drawing.Point(383, 385);
             this.simpleButtonSubmit.Name = "simpleButtonSubmit";
-            this.simpleButtonSubmit.Size = new System.Drawing.Size(156, 38);
+            this.simpleButtonSubmit.Padding = new System.Windows.Forms.Padding(5);
+            this.simpleButtonSubmit.Size = new System.Drawing.Size(156, 48);
             this.simpleButtonSubmit.StyleController = this.layoutControl1;
             this.simpleButtonSubmit.TabIndex = 16;
             this.simpleButtonSubmit.Text = "Submit";
@@ -323,7 +334,7 @@
             // 
             this.textEditTotalPrice.Location = new System.Drawing.Point(60, 460);
             this.textEditTotalPrice.Name = "textEditTotalPrice";
-            this.textEditTotalPrice.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textEditTotalPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEditTotalPrice.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEditTotalPrice.Properties.Appearance.Options.UseBackColor = true;
             this.textEditTotalPrice.Properties.Appearance.Options.UseFont = true;
@@ -340,7 +351,7 @@
             0});
             this.spinEditQuantity.Location = new System.Drawing.Point(59, 380);
             this.spinEditQuantity.Name = "spinEditQuantity";
-            this.spinEditQuantity.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spinEditQuantity.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.spinEditQuantity.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spinEditQuantity.Properties.Appearance.Options.UseBackColor = true;
             this.spinEditQuantity.Properties.Appearance.Options.UseFont = true;
@@ -354,7 +365,7 @@
             // 
             this.comboBoxEditItemName.Location = new System.Drawing.Point(19, 222);
             this.comboBoxEditItemName.Name = "comboBoxEditItemName";
-            this.comboBoxEditItemName.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxEditItemName.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.comboBoxEditItemName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditItemName.Properties.Appearance.Options.UseBackColor = true;
             this.comboBoxEditItemName.Properties.Appearance.Options.UseFont = true;
@@ -383,25 +394,6 @@
             this.emptySpaceItem11.Size = new System.Drawing.Size(353, 20);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(39)))), ((int)(((byte)(53)))));
-            this.layoutControlItem6.AppearanceItemCaption.Options.UseBackColor = true;
-            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem6.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem6.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.layoutControlItem6.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.layoutControlItem6.Control = this.comboBoxEditItemName;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 174);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(6, 6, 6, 6);
-            this.layoutControlItem6.Size = new System.Drawing.Size(271, 79);
-            this.layoutControlItem6.Text = "Item Name";
-            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(124, 23);
-            // 
             // emptySpaceItem27
             // 
             this.emptySpaceItem27.AllowHotTrack = false;
@@ -409,22 +401,6 @@
             this.emptySpaceItem27.Name = "emptySpaceItem27";
             this.emptySpaceItem27.Size = new System.Drawing.Size(33, 79);
             this.emptySpaceItem27.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.layoutControlItem1.AppearanceItemCaption.Options.UseBackColor = true;
-            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem1.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.layoutControlItem1.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.layoutControlItem1.Control = this.comboBoxEditSelectCustomer;
-            this.layoutControlItem1.Location = new System.Drawing.Point(271, 69);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(353, 73);
-            this.layoutControlItem1.Text = "Select Customer";
-            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(124, 23);
             // 
             // emptySpaceItem19
             // 
@@ -437,17 +413,19 @@
             // emptySpaceItem34
             // 
             this.emptySpaceItem34.AllowHotTrack = false;
-            this.emptySpaceItem34.Location = new System.Drawing.Point(271, 196);
+            this.emptySpaceItem34.Location = new System.Drawing.Point(271, 202);
             this.emptySpaceItem34.Name = "emptySpaceItem34";
-            this.emptySpaceItem34.Size = new System.Drawing.Size(353, 193);
+            this.emptySpaceItem34.Size = new System.Drawing.Size(353, 167);
             this.emptySpaceItem34.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem11
             // 
-            this.layoutControlItem11.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem11.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem11.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem11.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem11.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem11.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem11.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem11.Control = this.comboBoxEditSelectOption;
@@ -485,9 +463,9 @@
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem9.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem9.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(39)))), ((int)(((byte)(53)))));
+            this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem9.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem9.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem9.AppearanceItemCaption.Options.UseForeColor = true;
@@ -504,9 +482,9 @@
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem7.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(39)))), ((int)(((byte)(53)))));
+            this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem7.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem7.AppearanceItemCaption.Options.UseForeColor = true;
@@ -529,46 +507,14 @@
             this.emptySpaceItem24.Size = new System.Drawing.Size(33, 165);
             this.emptySpaceItem24.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(554, 152);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(70, 44);
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.simpleButtonSubmit;
-            this.layoutControlItem13.Location = new System.Drawing.Point(367, 389);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(162, 44);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem13.TextVisible = false;
-            // 
-            // layoutControlItem14
-            // 
-            this.layoutControlItem14.Control = this.simpleButtonCancel;
-            this.layoutControlItem14.Location = new System.Drawing.Point(367, 433);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(162, 44);
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem14.TextVisible = false;
-            // 
-            // emptySpaceItem4
-            // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(271, 34);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(353, 35);
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlItem15
             // 
-            this.layoutControlItem15.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem15.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem15.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem15.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem15.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem15.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem15.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem15.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem15.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem15.Control = this.dateEditDateSelection;
@@ -587,19 +533,11 @@
             this.emptySpaceItem7.Size = new System.Drawing.Size(353, 34);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem6
-            // 
-            this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(271, 152);
-            this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(64, 44);
-            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem10.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(39)))), ((int)(((byte)(53)))));
+            this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem10.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
@@ -614,32 +552,113 @@
             this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(124, 23);
             // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.simpleButtonSubmit;
+            this.layoutControlItem13.Location = new System.Drawing.Point(367, 369);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(162, 54);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.simpleButtonCancel;
+            this.layoutControlItem14.Location = new System.Drawing.Point(367, 423);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(162, 54);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem14.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseBackColor = true;
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem1.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem1.Control = this.comboBoxEditSelectCustomer;
+            this.layoutControlItem1.Location = new System.Drawing.Point(271, 69);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(353, 73);
+            this.layoutControlItem1.Text = "Select Customer";
+            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(124, 23);
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(271, 34);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(353, 35);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(271, 389);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(271, 369);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(96, 88);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(96, 108);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(529, 389);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(529, 369);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(95, 88);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(95, 108);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
+            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseBackColor = true;
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem6.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem6.Control = this.comboBoxEditItemName;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 174);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(6, 6, 6, 6);
+            this.layoutControlItem6.Size = new System.Drawing.Size(271, 79);
+            this.layoutControlItem6.Text = "Item Name";
+            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(124, 23);
+            // 
+            // emptySpaceItem6
+            // 
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.Location = new System.Drawing.Point(271, 152);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(64, 50);
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.Location = new System.Drawing.Point(554, 152);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(70, 50);
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // FormNewSale
             // 
-            this.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 523);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("FormNewSale.IconOptions.LargeImage")));
             this.Name = "FormNewSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "New Sale";
             this.Load += new System.EventHandler(this.FormNewSale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -655,9 +674,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.spinEditQuantity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditItemName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
@@ -667,16 +684,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             this.ResumeLayout(false);
 
         }

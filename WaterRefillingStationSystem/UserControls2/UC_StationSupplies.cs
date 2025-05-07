@@ -17,5 +17,10 @@ namespace WaterRefillingStationSystem.UserControls2
         {
             InitializeComponent();
         }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
