@@ -362,7 +362,7 @@
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("FormAddDispenserRent.IconOptions.LargeImage")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddDispenserRent";
-            this.Text = "Add Dispenser";
+            this.Text = "Add New Dispenser";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();

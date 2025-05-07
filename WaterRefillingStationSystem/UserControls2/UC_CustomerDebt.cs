@@ -77,5 +77,10 @@ namespace WaterRefillingStationSystem.UserControls2
             gridControlCustomerDebt.DataSource = _customerDebtRepository.GetAllDebtRecords();
             gridControlCustomerDebt.RefreshDataSource();
         }
+
+        private void gridControlCustomerDebt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

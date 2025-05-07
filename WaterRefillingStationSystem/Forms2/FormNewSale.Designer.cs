@@ -142,14 +142,16 @@
             this.layoutControlItem2.Control = this.simpleButtonAddNewCustomer;
             this.layoutControlItem2.Location = new System.Drawing.Point(335, 152);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(219, 44);
+            this.layoutControlItem2.Size = new System.Drawing.Size(219, 50);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // simpleButtonAddNewCustomer
             // 
+            this.simpleButtonAddNewCustomer.Appearance.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.simpleButtonAddNewCustomer.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButtonAddNewCustomer.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.simpleButtonAddNewCustomer.Appearance.Options.UseBackColor = true;
             this.simpleButtonAddNewCustomer.Appearance.Options.UseFont = true;
             this.simpleButtonAddNewCustomer.Appearance.Options.UseForeColor = true;
             this.simpleButtonAddNewCustomer.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
@@ -168,7 +170,8 @@
             this.simpleButtonAddNewCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonAddNewCustomer.ImageOptions.Image")));
             this.simpleButtonAddNewCustomer.Location = new System.Drawing.Point(351, 168);
             this.simpleButtonAddNewCustomer.Name = "simpleButtonAddNewCustomer";
-            this.simpleButtonAddNewCustomer.Size = new System.Drawing.Size(213, 38);
+            this.simpleButtonAddNewCustomer.Padding = new System.Windows.Forms.Padding(3);
+            this.simpleButtonAddNewCustomer.Size = new System.Drawing.Size(213, 44);
             this.simpleButtonAddNewCustomer.StyleController = this.layoutControl1;
             this.simpleButtonAddNewCustomer.TabIndex = 5;
             this.simpleButtonAddNewCustomer.Text = "Add New Customer";
@@ -288,9 +291,10 @@
             this.simpleButtonCancel.AppearancePressed.Options.UseFont = true;
             this.simpleButtonCancel.AppearancePressed.Options.UseForeColor = true;
             this.simpleButtonCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonCancel.ImageOptions.Image")));
-            this.simpleButtonCancel.Location = new System.Drawing.Point(383, 449);
+            this.simpleButtonCancel.Location = new System.Drawing.Point(383, 439);
             this.simpleButtonCancel.Name = "simpleButtonCancel";
-            this.simpleButtonCancel.Size = new System.Drawing.Size(156, 38);
+            this.simpleButtonCancel.Padding = new System.Windows.Forms.Padding(5);
+            this.simpleButtonCancel.Size = new System.Drawing.Size(156, 48);
             this.simpleButtonCancel.StyleController = this.layoutControl1;
             this.simpleButtonCancel.TabIndex = 17;
             this.simpleButtonCancel.Text = "Cancel";
@@ -317,9 +321,10 @@
             this.simpleButtonSubmit.AppearancePressed.Options.UseFont = true;
             this.simpleButtonSubmit.AppearancePressed.Options.UseForeColor = true;
             this.simpleButtonSubmit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonSubmit.ImageOptions.Image")));
-            this.simpleButtonSubmit.Location = new System.Drawing.Point(383, 405);
+            this.simpleButtonSubmit.Location = new System.Drawing.Point(383, 385);
             this.simpleButtonSubmit.Name = "simpleButtonSubmit";
-            this.simpleButtonSubmit.Size = new System.Drawing.Size(156, 38);
+            this.simpleButtonSubmit.Padding = new System.Windows.Forms.Padding(5);
+            this.simpleButtonSubmit.Size = new System.Drawing.Size(156, 48);
             this.simpleButtonSubmit.StyleController = this.layoutControl1;
             this.simpleButtonSubmit.TabIndex = 16;
             this.simpleButtonSubmit.Text = "Submit";
@@ -408,9 +413,9 @@
             // emptySpaceItem34
             // 
             this.emptySpaceItem34.AllowHotTrack = false;
-            this.emptySpaceItem34.Location = new System.Drawing.Point(271, 196);
+            this.emptySpaceItem34.Location = new System.Drawing.Point(271, 202);
             this.emptySpaceItem34.Name = "emptySpaceItem34";
-            this.emptySpaceItem34.Size = new System.Drawing.Size(353, 193);
+            this.emptySpaceItem34.Size = new System.Drawing.Size(353, 167);
             this.emptySpaceItem34.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem11
@@ -550,18 +555,18 @@
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.simpleButtonSubmit;
-            this.layoutControlItem13.Location = new System.Drawing.Point(367, 389);
+            this.layoutControlItem13.Location = new System.Drawing.Point(367, 369);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(162, 44);
+            this.layoutControlItem13.Size = new System.Drawing.Size(162, 54);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.simpleButtonCancel;
-            this.layoutControlItem14.Location = new System.Drawing.Point(367, 433);
+            this.layoutControlItem14.Location = new System.Drawing.Point(367, 423);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(162, 44);
+            this.layoutControlItem14.Size = new System.Drawing.Size(162, 54);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
@@ -594,17 +599,17 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(271, 389);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(271, 369);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(96, 88);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(96, 108);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(529, 389);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(529, 369);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(95, 88);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(95, 108);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
@@ -631,7 +636,7 @@
             this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.Location = new System.Drawing.Point(271, 152);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(64, 44);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(64, 50);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
@@ -639,7 +644,7 @@
             this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.Location = new System.Drawing.Point(554, 152);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(70, 44);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(70, 50);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // FormNewSale

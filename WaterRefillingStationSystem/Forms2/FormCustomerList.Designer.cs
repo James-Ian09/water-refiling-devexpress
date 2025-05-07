@@ -312,9 +312,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1154, 723);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("FormCustomerList.IconOptions.SvgImage")));
             this.Name = "FormCustomerList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCustomerList";
+            this.Text = "Customer List";
             this.Load += new System.EventHandler(this.FormCustomerList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCustomerList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
