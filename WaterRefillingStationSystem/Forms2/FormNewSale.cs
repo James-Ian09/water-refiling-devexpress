@@ -136,25 +136,6 @@ namespace WaterRefillingStationSystem.UserControls2
             XtraMessageBox.Show("Order successfully submitted!");
             ClearAllFields();
         }
-        private List<SalesDetails> AddTemporaryDebtRecord(string name, string orderType, string itemName, int quantity, int unitPrice, DateTime orderDate, int? debt)
-        {
-            var tempDebtRecords = _customerDebtGridControl.DataSource as List<SalesDetails> ?? new List<SalesDetails>();
-
-            SalesDetails sale = new SalesDetails
-            {
-                ItemName = itemName,
-                UnitPrice = unitPrice,
-                Quantity = quantity,
-                TotalPrice = 0, // ✅ Since it's a debt, TotalPrice stays 0
-                Debt = debt ?? 0,
-                OrderType = orderType,
-                OrderDate = orderDate
-            };
-
-            tempDebtRecords.Add(sale);
-
-            return tempDebtRecords;
-        }
         private void simpleButtonAddNewCustomer_Click(object sender, EventArgs e)
         {
             ICustomerRepository customerRepository = new CustomerRepository(); // Create the correct repository
