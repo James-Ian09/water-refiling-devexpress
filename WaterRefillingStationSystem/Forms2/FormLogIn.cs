@@ -12,6 +12,7 @@ using DevExpress.XtraEditors;
 using WaterRefillingStationSystem.Forms;
 using System.Data.SQLite;
 using WaterRefillingStationSystem.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace WaterRefillingStationSystem.Forms2
 {
@@ -33,6 +34,20 @@ namespace WaterRefillingStationSystem.Forms2
             mainForm2.ShowDialog();
             this.Hide();
         }
+
+        private void btnPasswordReveal_Click(object sender, EventArgs e)
+        {
+            TogglePasswordVisibility();
+        }
+
+        private void TogglePasswordVisibility()
+        {
+            bool isPasswordVisible = !textEdit2.Properties.UseSystemPasswordChar;
+            textEdit2.Properties.UseSystemPasswordChar = isPasswordVisible;
+            btnPasswordReveal.Text = isPasswordVisible ? "Show Password" : "Hide Password";
+        }
+
+
 
         //private void simpleButtonTestDB_Click(object sender, EventArgs e)
         //{

@@ -213,7 +213,9 @@
             this.checkEditListInCustomerDebt.Location = new System.Drawing.Point(16, 158);
             this.checkEditListInCustomerDebt.Name = "checkEditListInCustomerDebt";
             this.checkEditListInCustomerDebt.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEditListInCustomerDebt.Properties.Appearance.ForeColor = System.Drawing.Color.SlateGray;
             this.checkEditListInCustomerDebt.Properties.Appearance.Options.UseFont = true;
+            this.checkEditListInCustomerDebt.Properties.Appearance.Options.UseForeColor = true;
             this.checkEditListInCustomerDebt.Properties.Caption = "List in Customer Debt";
             this.checkEditListInCustomerDebt.Size = new System.Drawing.Size(265, 26);
             this.checkEditListInCustomerDebt.StyleController = this.layoutControl1;
@@ -224,7 +226,7 @@
             // 
             this.comboBoxEditSelectOption.Location = new System.Drawing.Point(16, 114);
             this.comboBoxEditSelectOption.Name = "comboBoxEditSelectOption";
-            this.comboBoxEditSelectOption.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxEditSelectOption.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.comboBoxEditSelectOption.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditSelectOption.Properties.Appearance.Options.UseBackColor = true;
             this.comboBoxEditSelectOption.Properties.Appearance.Options.UseFont = true;
@@ -243,7 +245,7 @@
             this.comboBoxEditSelectCustomer.Enabled = false;
             this.comboBoxEditSelectCustomer.Location = new System.Drawing.Point(287, 114);
             this.comboBoxEditSelectCustomer.Name = "comboBoxEditSelectCustomer";
-            this.comboBoxEditSelectCustomer.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxEditSelectCustomer.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.comboBoxEditSelectCustomer.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditSelectCustomer.Properties.Appearance.Options.UseBackColor = true;
             this.comboBoxEditSelectCustomer.Properties.Appearance.Options.UseFont = true;
@@ -257,7 +259,7 @@
             // 
             this.textEditUnitPrice.Location = new System.Drawing.Point(59, 301);
             this.textEditUnitPrice.Name = "textEditUnitPrice";
-            this.textEditUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textEditUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEditUnitPrice.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEditUnitPrice.Properties.Appearance.Options.UseBackColor = true;
             this.textEditUnitPrice.Properties.Appearance.Options.UseFont = true;
@@ -267,8 +269,10 @@
             // 
             // simpleButtonCancel
             // 
+            this.simpleButtonCancel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
             this.simpleButtonCancel.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButtonCancel.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButtonCancel.Appearance.Options.UseBackColor = true;
             this.simpleButtonCancel.Appearance.Options.UseFont = true;
             this.simpleButtonCancel.Appearance.Options.UseForeColor = true;
             this.simpleButtonCancel.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
@@ -294,8 +298,10 @@
             // 
             // simpleButtonSubmit
             // 
+            this.simpleButtonSubmit.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
             this.simpleButtonSubmit.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButtonSubmit.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButtonSubmit.Appearance.Options.UseBackColor = true;
             this.simpleButtonSubmit.Appearance.Options.UseFont = true;
             this.simpleButtonSubmit.Appearance.Options.UseForeColor = true;
             this.simpleButtonSubmit.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
@@ -323,7 +329,7 @@
             // 
             this.textEditTotalPrice.Location = new System.Drawing.Point(60, 460);
             this.textEditTotalPrice.Name = "textEditTotalPrice";
-            this.textEditTotalPrice.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textEditTotalPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEditTotalPrice.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEditTotalPrice.Properties.Appearance.Options.UseBackColor = true;
             this.textEditTotalPrice.Properties.Appearance.Options.UseFont = true;
@@ -340,7 +346,7 @@
             0});
             this.spinEditQuantity.Location = new System.Drawing.Point(59, 380);
             this.spinEditQuantity.Name = "spinEditQuantity";
-            this.spinEditQuantity.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spinEditQuantity.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.spinEditQuantity.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spinEditQuantity.Properties.Appearance.Options.UseBackColor = true;
             this.spinEditQuantity.Properties.Appearance.Options.UseFont = true;
@@ -354,7 +360,7 @@
             // 
             this.comboBoxEditItemName.Location = new System.Drawing.Point(19, 222);
             this.comboBoxEditItemName.Name = "comboBoxEditItemName";
-            this.comboBoxEditItemName.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxEditItemName.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.comboBoxEditItemName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEditItemName.Properties.Appearance.Options.UseBackColor = true;
             this.comboBoxEditItemName.Properties.Appearance.Options.UseFont = true;
@@ -409,10 +415,12 @@
             // 
             // layoutControlItem11
             // 
-            this.layoutControlItem11.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem11.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem11.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem11.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem11.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem11.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem11.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem11.Control = this.comboBoxEditSelectOption;
@@ -450,9 +458,9 @@
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem9.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem9.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(39)))), ((int)(((byte)(53)))));
+            this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem9.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem9.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem9.AppearanceItemCaption.Options.UseForeColor = true;
@@ -469,9 +477,9 @@
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem7.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(39)))), ((int)(((byte)(53)))));
+            this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem7.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem7.AppearanceItemCaption.Options.UseForeColor = true;
@@ -496,10 +504,12 @@
             // 
             // layoutControlItem15
             // 
-            this.layoutControlItem15.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem15.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem15.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem15.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem15.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem15.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem15.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem15.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem15.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem15.Control = this.dateEditDateSelection;
@@ -520,9 +530,9 @@
             // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem10.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(39)))), ((int)(((byte)(53)))));
+            this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem10.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
@@ -557,10 +567,12 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem1.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem1.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem1.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem1.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem1.Control = this.comboBoxEditSelectCustomer;
@@ -597,9 +609,9 @@
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.AppearanceItemCaption.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.layoutControlItem6.AppearanceItemCaption.BackColor = System.Drawing.Color.Transparent;
             this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(39)))), ((int)(((byte)(53)))));
+            this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem6.AppearanceItemCaption.Options.UseBackColor = true;
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.AppearanceItemCaption.Options.UseForeColor = true;
@@ -632,14 +644,16 @@
             // 
             // FormNewSale
             // 
-            this.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 523);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("FormNewSale.IconOptions.LargeImage")));
             this.Name = "FormNewSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "New Sale";
             this.Load += new System.EventHandler(this.FormNewSale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
