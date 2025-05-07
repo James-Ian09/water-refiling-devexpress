@@ -98,7 +98,6 @@
             this.textEditLastName.Size = new System.Drawing.Size(411, 34);
             this.textEditLastName.StyleController = this.layoutControl1;
             this.textEditLastName.TabIndex = 12;
-            this.textEditLastName.EditValueChanged += new System.EventHandler(this.textEditLastName_EditValueChanged);
             // 
             // textEditMiddleName
             // 
@@ -107,7 +106,6 @@
             this.textEditMiddleName.Size = new System.Drawing.Size(411, 34);
             this.textEditMiddleName.StyleController = this.layoutControl1;
             this.textEditMiddleName.TabIndex = 11;
-            this.textEditMiddleName.EditValueChanged += new System.EventHandler(this.textEditMiddleName_EditValueChanged);
             // 
             // simpleButtonCancel
             // 
@@ -170,7 +168,6 @@
             this.textEditAddress.Size = new System.Drawing.Size(411, 34);
             this.textEditAddress.StyleController = this.layoutControl1;
             this.textEditAddress.TabIndex = 6;
-            this.textEditAddress.EditValueChanged += new System.EventHandler(this.textEditAddress_EditValueChanged);
             // 
             // textEditContactNumber
             // 
@@ -179,7 +176,6 @@
             this.textEditContactNumber.Size = new System.Drawing.Size(411, 34);
             this.textEditContactNumber.StyleController = this.layoutControl1;
             this.textEditContactNumber.TabIndex = 5;
-            this.textEditContactNumber.EditValueChanged += new System.EventHandler(this.textEditContactNumber_EditValueChanged);
             // 
             // textEditFirstName
             // 
@@ -188,7 +184,6 @@
             this.textEditFirstName.Size = new System.Drawing.Size(411, 34);
             this.textEditFirstName.StyleController = this.layoutControl1;
             this.textEditFirstName.TabIndex = 4;
-            this.textEditFirstName.EditValueChanged += new System.EventHandler(this.textEditFirstName_EditValueChanged);
             // 
             // Root
             // 

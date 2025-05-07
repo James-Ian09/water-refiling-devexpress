@@ -24,7 +24,6 @@ namespace WaterRefillingStationSystem.UserControls2
         private readonly ICustomerRepository _customerRepository;
         private readonly ISaleRepository _saleRepository;
         private readonly ICustomerDebtRepository _customerDebtRepository;
-        private GridControl _customerDebtGridControl;
         public FormNewSale(ICustomerRepository customerRepository, ISaleRepository saleRepository,
                    ICustomerDebtRepository customerDebtRepository, GridControl customerDebtGridControl)
         {
@@ -32,7 +31,6 @@ namespace WaterRefillingStationSystem.UserControls2
             _customerRepository = customerRepository; //Save reference for customer lookups
             _saleRepository = saleRepository; //Save reference for sales operations
             _customerDebtRepository = customerDebtRepository;
-            _customerDebtGridControl = customerDebtGridControl; //Save reference for later use
 
             this.Load += FormNewSale_Load;
         }
@@ -122,13 +120,13 @@ namespace WaterRefillingStationSystem.UserControls2
                     ItemName = itemName,
                     Quantity = quantity,
                     UnitPrice = unitPrice,
-                    OrderDate = selectedDate.Value.ToString("dd-MM-yyyy"),
+                    OrderDate = selectedDate.Value.Date.ToString("yyyy-MM-dd"),
                     Debt = totalPrice
                 };
 
-                _customerDebtRepository.AddDebtRecord(newDebtRecord); // ✅ Insert into DB
+                _customerDebtRepository.AddDebtRecord(newDebtRecord); //Insert into DB
                 XtraMessageBox.Show("Sale added to Customer Debt records!");
-                return; // ✅ Prevent database insertion into SalesDetails
+                return; //Prevent database insertion into SalesDetails
             }
 
             //If checkbox is NOT checked, saves the sale directly to db SaledDetails table

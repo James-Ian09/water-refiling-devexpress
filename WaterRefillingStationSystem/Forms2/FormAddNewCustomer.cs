@@ -27,28 +27,10 @@ namespace WaterRefillingStationSystem.Forms2
             InitializeComponent();
             _customerRepository = customerRepository;
         }
-        private void textEditFirstName_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textEditMiddleName_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textEditLastName_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textEditContactNumber_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textEditAddress_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
         private void simpleButtonSave_Click(object sender, EventArgs e)
         {
+            _customer = new Customers();
+
             // Validate required fields
             if (string.IsNullOrWhiteSpace(textEditFirstName.Text) ||
                 string.IsNullOrWhiteSpace(textEditLastName.Text) ||
@@ -65,15 +47,17 @@ namespace WaterRefillingStationSystem.Forms2
             _customer.ContactNumber = textEditContactNumber.Text;
             _customer.Address = textEditAddress.Text;
 
-            if (_customer.CustomerID > 0) // If CustomerID exists, update record
+            //Check if CustomerID exists: Update instead of inserting a new record
+            if (CustomerID > 0) // Editing an existing customer
             {
+                _customer.CustomerID = CustomerID;
                 _customerRepository.UpdateCustomer(_customer);
                 XtraMessageBox.Show("Customer updated successfully!");
             }
-            else // New customer, so add record
+            else // Adding a new customer
             {
                 _customerRepository.AddCustomer(_customer);
-                XtraMessageBox.Show("Customer added successfully!");
+                XtraMessageBox.Show("New customer added successfully!");
             }
 
             // Clear input fields after saving
