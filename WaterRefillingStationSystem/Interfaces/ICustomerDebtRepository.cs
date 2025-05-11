@@ -11,7 +11,7 @@ namespace WaterRefillingStationSystem.Interfaces
     {
         void AddDebtRecord(CustomerDebt debtRecord);
         List<CustomerDebt> GetAllDebtRecords();
-        void RemoveDebtRecord(string name, DateTime orderDate);
-        void MarkDebtAsPaid(string customerName, DateTime orderDate);
+        void RemoveDebtRecord(int debtID);
+        void MarkDebtAsPaid(string customerName, string orderDate);
     }
 }

@@ -36,9 +36,9 @@ namespace WaterRefillingStationSystem.Forms2
             try
             {
                 List<Customers> customersData = _customerRepository.GetAllCustomers();
-                List<object> processedData = new List<object>();
+                List<Customers> processedData = new List<Customers>();
 
-                foreach (var c in customersData)
+                foreach (Customers c in customersData)
                 {
                     string fullName;
 
@@ -52,11 +52,11 @@ namespace WaterRefillingStationSystem.Forms2
                         fullName = c.FirstName + " " + c.MiddleName + " " + c.LastName;
                     }
 
-                    //Store the processed customer data in a list
-                    processedData.Add(new
+                    //Store the processed customer data in a typed list
+                    processedData.Add(new Customers
                     {
                         CustomerID = c.CustomerID,
-                        Name = fullName,
+                        FullName = fullName,
                         ContactNumber = c.ContactNumber,
                         Address = c.Address
                     });
@@ -71,6 +71,7 @@ namespace WaterRefillingStationSystem.Forms2
             }
         }
 
+
         private void simpleButtonAddNewCustomer_Click(object sender, EventArgs e)
         {
             FormAddNewCustomer formAddNewCustomer = new FormAddNewCustomer(_customerRepository);
@@ -81,29 +82,36 @@ namespace WaterRefillingStationSystem.Forms2
         }
         private void simpleButtonEdit_Click(object sender, EventArgs e)
         {
-            // Get the GridView associated with the GridControl
-            var gridView = gridControlCustomerList.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
+            //Get the MainView
+            var gridView = (DevExpress.XtraGrid.Views.Grid.GridView)gridControlCustomerList.MainView;
+
             int selectedRowIndex = gridView.FocusedRowHandle;
 
             if (selectedRowIndex >= 0)
             {
-                int customerID = Convert.ToInt32(gridView.GetRowCellValue(selectedRowIndex, "CustomerID") ?? 0);
-                Customers customer = _customerRepository.GetCustomerById(customerID);
+                // Get customerID
+                var customerIdValue = gridView.GetRowCellValue(selectedRowIndex, "CustomerID");
 
-                FormAddNewCustomer formAddNewCustomer = new FormAddNewCustomer(_customerRepository);
-                formAddNewCustomer.SetCustomerData(customer);
-                formAddNewCustomer.ShowDialog();
+                if (customerIdValue != null)
+                {
+                    int customerID = Convert.ToInt32(customerIdValue);
+                    Customers customer = _customerRepository.GetCustomerById(customerID);
 
-                LoadCustomerData();
+                    FormAddNewCustomer formAddNewCustomer = new FormAddNewCustomer(_customerRepository);
+                    formAddNewCustomer.SetCustomerData(customer);
+                    formAddNewCustomer.ShowDialog();
+
+                    LoadCustomerData();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid customer selection.");
+                }
             }
             else
             {
-                XtraMessageBox.Show("Please select a row to edit.");
+                MessageBox.Show("Please select a row to edit.");
             }
-        }
-        private void gridControlCustomerList_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

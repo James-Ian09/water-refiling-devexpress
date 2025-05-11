@@ -30,27 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStockManager));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.textEditUnitPrice = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButtonCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonSaveChanges = new DevExpress.XtraEditors.SimpleButton();
+            this.textEditAvailableStock = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -61,24 +50,17 @@
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.textEditItemName = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditUnitPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditAvailableStock.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -89,191 +71,105 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditItemName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.textEdit4);
-            this.layoutControl1.Controls.Add(this.simpleButton4);
-            this.layoutControl1.Controls.Add(this.simpleButton3);
-            this.layoutControl1.Controls.Add(this.simpleButton2);
-            this.layoutControl1.Controls.Add(this.textEdit3);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.textEdit1);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit1);
+            this.layoutControl1.Controls.Add(this.textEditItemName);
+            this.layoutControl1.Controls.Add(this.textEditUnitPrice);
+            this.layoutControl1.Controls.Add(this.simpleButtonCancel);
+            this.layoutControl1.Controls.Add(this.simpleButtonSaveChanges);
+            this.layoutControl1.Controls.Add(this.textEditAvailableStock);
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(531, 492);
+            this.layoutControl1.Size = new System.Drawing.Size(440, 380);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // textEdit4
+            // textEditUnitPrice
             // 
-            this.textEdit4.Location = new System.Drawing.Point(91, 155);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(328, 38);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 15;
+            this.textEditUnitPrice.Location = new System.Drawing.Point(80, 151);
+            this.textEditUnitPrice.Name = "textEditUnitPrice";
+            this.textEditUnitPrice.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEditUnitPrice.Properties.Appearance.Options.UseFont = true;
+            this.textEditUnitPrice.Size = new System.Drawing.Size(280, 38);
+            this.textEditUnitPrice.StyleController = this.layoutControl1;
+            this.textEditUnitPrice.TabIndex = 15;
+            this.textEditUnitPrice.EditValueChanged += new System.EventHandler(this.textEditUnitPrice_EditValueChanged);
             // 
-            // simpleButton4
+            // simpleButtonCancel
             // 
-            this.simpleButton4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton4.Appearance.Options.UseBackColor = true;
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.Appearance.Options.UseForeColor = true;
-            this.simpleButton4.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
-            this.simpleButton4.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.AppearanceHovered.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton4.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton4.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton4.AppearanceHovered.Options.UseForeColor = true;
-            this.simpleButton4.AppearancePressed.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton4.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.AppearancePressed.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton4.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton4.AppearancePressed.Options.UseFont = true;
-            this.simpleButton4.AppearancePressed.Options.UseForeColor = true;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(178, 462);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(145, 38);
-            this.simpleButton4.StyleController = this.layoutControl1;
-            this.simpleButton4.TabIndex = 13;
-            this.simpleButton4.Text = "Cancel";
+            this.simpleButtonCancel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
+            this.simpleButtonCancel.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonCancel.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.simpleButtonCancel.Appearance.Options.UseBackColor = true;
+            this.simpleButtonCancel.Appearance.Options.UseFont = true;
+            this.simpleButtonCancel.Appearance.Options.UseForeColor = true;
+            this.simpleButtonCancel.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
+            this.simpleButtonCancel.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonCancel.AppearanceHovered.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.simpleButtonCancel.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButtonCancel.AppearanceHovered.Options.UseFont = true;
+            this.simpleButtonCancel.AppearanceHovered.Options.UseForeColor = true;
+            this.simpleButtonCancel.AppearancePressed.BackColor = System.Drawing.Color.Gray;
+            this.simpleButtonCancel.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonCancel.AppearancePressed.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.simpleButtonCancel.AppearancePressed.Options.UseBackColor = true;
+            this.simpleButtonCancel.AppearancePressed.Options.UseFont = true;
+            this.simpleButtonCancel.AppearancePressed.Options.UseForeColor = true;
+            this.simpleButtonCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonCancel.ImageOptions.Image")));
+            this.simpleButtonCancel.Location = new System.Drawing.Point(146, 326);
+            this.simpleButtonCancel.Name = "simpleButtonCancel";
+            this.simpleButtonCancel.Size = new System.Drawing.Size(146, 38);
+            this.simpleButtonCancel.StyleController = this.layoutControl1;
+            this.simpleButtonCancel.TabIndex = 13;
+            this.simpleButtonCancel.Text = "Cancel";
+            this.simpleButtonCancel.Click += new System.EventHandler(this.simpleButtonCancel_Click);
             // 
-            // simpleButton3
+            // simpleButtonSaveChanges
             // 
-            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton3.Appearance.Options.UseBackColor = true;
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Appearance.Options.UseForeColor = true;
-            this.simpleButton3.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
-            this.simpleButton3.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.AppearanceHovered.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton3.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton3.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton3.AppearanceHovered.Options.UseForeColor = true;
-            this.simpleButton3.AppearancePressed.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton3.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.AppearancePressed.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton3.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton3.AppearancePressed.Options.UseFont = true;
-            this.simpleButton3.AppearancePressed.Options.UseForeColor = true;
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(178, 418);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(145, 38);
-            this.simpleButton3.StyleController = this.layoutControl1;
-            this.simpleButton3.TabIndex = 12;
-            this.simpleButton3.Text = "Save Changes";
+            this.simpleButtonSaveChanges.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
+            this.simpleButtonSaveChanges.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonSaveChanges.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.simpleButtonSaveChanges.Appearance.Options.UseBackColor = true;
+            this.simpleButtonSaveChanges.Appearance.Options.UseFont = true;
+            this.simpleButtonSaveChanges.Appearance.Options.UseForeColor = true;
+            this.simpleButtonSaveChanges.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
+            this.simpleButtonSaveChanges.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonSaveChanges.AppearanceHovered.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.simpleButtonSaveChanges.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButtonSaveChanges.AppearanceHovered.Options.UseFont = true;
+            this.simpleButtonSaveChanges.AppearanceHovered.Options.UseForeColor = true;
+            this.simpleButtonSaveChanges.AppearancePressed.BackColor = System.Drawing.Color.Gray;
+            this.simpleButtonSaveChanges.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonSaveChanges.AppearancePressed.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.simpleButtonSaveChanges.AppearancePressed.Options.UseBackColor = true;
+            this.simpleButtonSaveChanges.AppearancePressed.Options.UseFont = true;
+            this.simpleButtonSaveChanges.AppearancePressed.Options.UseForeColor = true;
+            this.simpleButtonSaveChanges.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonSaveChanges.ImageOptions.Image")));
+            this.simpleButtonSaveChanges.Location = new System.Drawing.Point(146, 282);
+            this.simpleButtonSaveChanges.Name = "simpleButtonSaveChanges";
+            this.simpleButtonSaveChanges.Size = new System.Drawing.Size(146, 38);
+            this.simpleButtonSaveChanges.StyleController = this.layoutControl1;
+            this.simpleButtonSaveChanges.TabIndex = 12;
+            this.simpleButtonSaveChanges.Text = "Save Changes";
+            this.simpleButtonSaveChanges.Click += new System.EventHandler(this.simpleButtonSaveChanges_Click);
             // 
-            // simpleButton2
+            // textEditAvailableStock
             // 
-            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton2.Appearance.Options.UseBackColor = true;
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Appearance.Options.UseForeColor = true;
-            this.simpleButton2.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
-            this.simpleButton2.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.AppearanceHovered.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton2.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton2.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton2.AppearanceHovered.Options.UseForeColor = true;
-            this.simpleButton2.AppearancePressed.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton2.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.AppearancePressed.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton2.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton2.AppearancePressed.Options.UseFont = true;
-            this.simpleButton2.AppearancePressed.Options.UseForeColor = true;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(320, 374);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(99, 38);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 11;
-            this.simpleButton2.Text = "Remove";
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(91, 374);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(223, 38);
-            this.textEdit3.StyleController = this.layoutControl1;
-            this.textEdit3.TabIndex = 10;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.AppearanceHovered.BackColor = System.Drawing.Color.DarkGray;
-            this.simpleButton1.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.AppearanceHovered.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton1.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton1.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton1.AppearanceHovered.Options.UseForeColor = true;
-            this.simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.Gray;
-            this.simpleButton1.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.AppearancePressed.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
-            this.simpleButton1.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton1.AppearancePressed.Options.UseFont = true;
-            this.simpleButton1.AppearancePressed.Options.UseForeColor = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(320, 301);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(99, 38);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 9;
-            this.simpleButton1.Text = "Add";
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(91, 301);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(223, 38);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 8;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(91, 228);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(328, 38);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 7;
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(91, 82);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(328, 38);
-            this.comboBoxEdit1.StyleController = this.layoutControl1;
-            this.comboBoxEdit1.TabIndex = 5;
+            this.textEditAvailableStock.Location = new System.Drawing.Point(80, 224);
+            this.textEditAvailableStock.Name = "textEditAvailableStock";
+            this.textEditAvailableStock.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textEditAvailableStock.Properties.Appearance.Options.UseFont = true;
+            this.textEditAvailableStock.Size = new System.Drawing.Size(280, 38);
+            this.textEditAvailableStock.StyleController = this.layoutControl1;
+            this.textEditAvailableStock.TabIndex = 7;
+            this.textEditAvailableStock.EditValueChanged += new System.EventHandler(this.textEditAvailableStock_EditValueChanged);
             // 
             // labelControl1
             // 
@@ -281,7 +177,7 @@
             this.labelControl1.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(178, 16);
+            this.labelControl1.Location = new System.Drawing.Point(138, 16);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(162, 31);
             this.labelControl1.StyleController = this.layoutControl1;
@@ -296,13 +192,7 @@
             this.layoutControlItem1,
             this.emptySpaceItem2,
             this.emptySpaceItem3,
-            this.layoutControlItem2,
             this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
-            this.emptySpaceItem7,
-            this.layoutControlItem7,
-            this.layoutControlItem8,
             this.emptySpaceItem8,
             this.layoutControlItem9,
             this.layoutControlItem10,
@@ -312,15 +202,16 @@
             this.emptySpaceItem14,
             this.emptySpaceItem4,
             this.emptySpaceItem5,
-            this.layoutControlItem12});
+            this.layoutControlItem12,
+            this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(510, 516);
+            this.Root.Size = new System.Drawing.Size(440, 380);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.labelControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(162, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(122, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(168, 37);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -331,32 +222,16 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(162, 37);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(122, 37);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(330, 0);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(290, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(154, 37);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(124, 37);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
-            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem2.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.layoutControlItem2.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.layoutControlItem2.Control = this.comboBoxEdit1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(75, 37);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(334, 73);
-            this.layoutControlItem2.Text = "Item Name";
-            this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(116, 23);
             // 
             // layoutControlItem4
             // 
@@ -366,92 +241,37 @@
             this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem4.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem4.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.layoutControlItem4.Control = this.textEdit1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(75, 183);
+            this.layoutControlItem4.Control = this.textEditAvailableStock;
+            this.layoutControlItem4.Location = new System.Drawing.Point(64, 179);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(334, 73);
+            this.layoutControlItem4.Size = new System.Drawing.Size(286, 73);
             this.layoutControlItem4.Text = "Available Stock";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(116, 23);
             // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
-            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem5.Control = this.textEdit2;
-            this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
-            this.layoutControlItem5.Location = new System.Drawing.Point(75, 256);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(229, 73);
-            this.layoutControlItem5.Text = "Add Stock";
-            this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(116, 23);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.simpleButton1;
-            this.layoutControlItem6.Location = new System.Drawing.Point(304, 285);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(105, 44);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
-            // emptySpaceItem7
-            // 
-            this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(304, 256);
-            this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(105, 29);
-            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
-            this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem7.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem7.Control = this.textEdit3;
-            this.layoutControlItem7.Location = new System.Drawing.Point(75, 329);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(229, 73);
-            this.layoutControlItem7.Text = "Remove Stock";
-            this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(116, 23);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.simpleButton2;
-            this.layoutControlItem8.Location = new System.Drawing.Point(304, 358);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(105, 44);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextVisible = false;
-            // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(304, 329);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(64, 252);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(105, 29);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(286, 14);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.Control = this.simpleButton3;
-            this.layoutControlItem9.Location = new System.Drawing.Point(162, 402);
+            this.layoutControlItem9.Control = this.simpleButtonSaveChanges;
+            this.layoutControlItem9.Location = new System.Drawing.Point(130, 266);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(151, 44);
+            this.layoutControlItem9.Size = new System.Drawing.Size(152, 44);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.Control = this.simpleButton4;
-            this.layoutControlItem10.Location = new System.Drawing.Point(162, 446);
+            this.layoutControlItem10.Control = this.simpleButtonCancel;
+            this.layoutControlItem10.Location = new System.Drawing.Point(130, 310);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(151, 44);
+            this.layoutControlItem10.Size = new System.Drawing.Size(152, 44);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
@@ -460,47 +280,47 @@
             this.emptySpaceItem11.AllowHotTrack = false;
             this.emptySpaceItem11.Location = new System.Drawing.Point(0, 37);
             this.emptySpaceItem11.Name = "emptySpaceItem11";
-            this.emptySpaceItem11.Size = new System.Drawing.Size(75, 73);
+            this.emptySpaceItem11.Size = new System.Drawing.Size(64, 69);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem12
             // 
             this.emptySpaceItem12.AllowHotTrack = false;
-            this.emptySpaceItem12.Location = new System.Drawing.Point(409, 37);
+            this.emptySpaceItem12.Location = new System.Drawing.Point(350, 37);
             this.emptySpaceItem12.Name = "emptySpaceItem12";
-            this.emptySpaceItem12.Size = new System.Drawing.Size(75, 73);
+            this.emptySpaceItem12.Size = new System.Drawing.Size(64, 69);
             this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem13
             // 
             this.emptySpaceItem13.AllowHotTrack = false;
-            this.emptySpaceItem13.Location = new System.Drawing.Point(313, 402);
+            this.emptySpaceItem13.Location = new System.Drawing.Point(282, 266);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(96, 88);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(68, 88);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem14
             // 
             this.emptySpaceItem14.AllowHotTrack = false;
-            this.emptySpaceItem14.Location = new System.Drawing.Point(75, 402);
+            this.emptySpaceItem14.Location = new System.Drawing.Point(64, 266);
             this.emptySpaceItem14.Name = "emptySpaceItem14";
-            this.emptySpaceItem14.Size = new System.Drawing.Size(87, 88);
+            this.emptySpaceItem14.Size = new System.Drawing.Size(66, 88);
             this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 110);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 106);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(75, 380);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(64, 248);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(409, 110);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(350, 106);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(75, 380);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(64, 248);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem12
@@ -511,13 +331,37 @@
             this.layoutControlItem12.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem12.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem12.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.layoutControlItem12.Control = this.textEdit4;
-            this.layoutControlItem12.Location = new System.Drawing.Point(75, 110);
+            this.layoutControlItem12.Control = this.textEditUnitPrice;
+            this.layoutControlItem12.Location = new System.Drawing.Point(64, 106);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(334, 73);
+            this.layoutControlItem12.Size = new System.Drawing.Size(286, 73);
             this.layoutControlItem12.Text = "Unit Price";
             this.layoutControlItem12.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(116, 23);
+            // 
+            // textEditItemName
+            // 
+            this.textEditItemName.Location = new System.Drawing.Point(80, 82);
+            this.textEditItemName.Name = "textEditItemName";
+            this.textEditItemName.Size = new System.Drawing.Size(280, 34);
+            this.textEditItemName.StyleController = this.layoutControl1;
+            this.textEditItemName.TabIndex = 16;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem3.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem3.Control = this.textEditItemName;
+            this.layoutControlItem3.Location = new System.Drawing.Point(64, 37);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(286, 69);
+            this.layoutControlItem3.Text = "Item Name";
+            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(116, 23);
             // 
             // FormStockManager
             // 
@@ -525,31 +369,23 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 492);
+            this.ClientSize = new System.Drawing.Size(440, 380);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("FormStockManager.IconOptions.LargeImage")));
             this.MaximizeBox = false;
             this.Name = "FormStockManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock Manager";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditUnitPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditAvailableStock.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -560,6 +396,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditItemName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,31 +410,22 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit textEditAvailableStock;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonCancel;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonSaveChanges;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem12;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem13;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem14;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit textEditUnitPrice;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.TextEdit textEditItemName;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

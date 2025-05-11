@@ -15,12 +15,8 @@ namespace WaterRefillingStationSystem.Models
         public int UnitPrice { get; set; }
         public int Quantity { get; set; }
         public int TotalPrice { get; set; }
-        public int Debt { get; set; } // Represents Total Debt if applicable
         public string OrderType { get; set; }
-        public DateTime OrderDate { get; set; }
-        public int AvailableStock { get; set; }
-        public string RentedItems { get; set; }
-        public DateTime RentedDate { get; set; }
+        public string OrderDate { get; set; }
     }
 
 }

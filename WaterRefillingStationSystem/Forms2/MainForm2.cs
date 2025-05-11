@@ -53,7 +53,7 @@ namespace WaterRefillingStationSystem.Forms
             ICustomerRepository customerRepository = new CustomerRepository();  //Add Customer Repository
             ISaleRepository saleRepository = new SaleRepository();
             ICustomerDebtRepository customerDebtRepository = new CustomerDebtRepository();
-            FormNewSale newSaleForm = new FormNewSale(customerRepository, saleRepository, customerDebtRepository, _ucCustomerDebt.gridControlCustomerDebt);
+            FormNewSale newSaleForm = new FormNewSale(customerRepository, saleRepository, customerDebtRepository, _ucCustomerDebt);
             newSaleForm.ShowDialog();
         }
 
@@ -122,6 +122,16 @@ namespace WaterRefillingStationSystem.Forms
             {
                 var salesDetails = connection.Query<SalesDetails>(sql, commandType: CommandType.Text);
                 return salesDetails.ToList();
+            }
+        }
+
+        private void aciLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = XtraMessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

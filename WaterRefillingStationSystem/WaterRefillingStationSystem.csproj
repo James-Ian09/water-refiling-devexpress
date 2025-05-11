@@ -147,12 +147,6 @@
     <Compile Include="Forms2\FormLogIn.Designer.cs">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms2\MainForm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +156,11 @@
     <Compile Include="Interfaces\ICustomerDebtRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
     <Compile Include="Interfaces\ISaleRepository.cs" />
+    <Compile Include="Interfaces\IStationSuppliesRepository.cs" />
     <Compile Include="Models\CustomerDebt.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\SalesDetails.cs" />
+    <Compile Include="Models\StationSupplies.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -181,6 +177,7 @@
     <Compile Include="Repositories\CustomerDebtRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\SalesRepository.cs" />
+    <Compile Include="Repositories\StationSuppliesRepository.cs" />
     <Compile Include="UserControls2\UC_RentedDispensers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,66 +214,6 @@
     <Compile Include="UserControls2\UC_TransactionHistory.Designer.cs">
       <DependentUpon>UC_TransactionHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Customer_Borrower.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_Customer_Borrower.Designer.cs">
-      <DependentUpon>UC_Customer_Borrower.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_Customer_CustomerInformation.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_Customer_CustomerInformation.Designer.cs">
-      <DependentUpon>UC_Customer_CustomerInformation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_Delivery.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_Delivery.Designer.cs">
-      <DependentUpon>UC_Delivery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_History.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_History.Designer.cs">
-      <DependentUpon>UC_History.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_POS_NewCustomer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_POS_NewCustomer.Designer.cs">
-      <DependentUpon>UC_POS_NewCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_POS_POS.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_POS_POS.Designer.cs">
-      <DependentUpon>UC_POS_POS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_Customer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_Customer.Designer.cs">
-      <DependentUpon>UC_Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_AdminPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_AdminPanel.Designer.cs">
-      <DependentUpon>UC_AdminPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_POS_Customer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_POS_Customer.Designer.cs">
-      <DependentUpon>UC_POS_Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_TaskCalendar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_TaskCalendar.Designer.cs">
-      <DependentUpon>UC_TaskCalendar.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,9 +237,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms2\FormViewDetails.resx">
       <DependentUpon>FormViewDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms2\MainForm2.resx">
       <DependentUpon>MainForm2.cs</DependentUpon>
@@ -333,36 +267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls2\UC_TransactionHistory.resx">
       <DependentUpon>UC_TransactionHistory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Customer_Borrower.resx">
-      <DependentUpon>UC_Customer_Borrower.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Customer_CustomerInformation.resx">
-      <DependentUpon>UC_Customer_CustomerInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Delivery.resx">
-      <DependentUpon>UC_Delivery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_History.resx">
-      <DependentUpon>UC_History.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_POS_NewCustomer.resx">
-      <DependentUpon>UC_POS_NewCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_POS_POS.resx">
-      <DependentUpon>UC_POS_POS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Customer.resx">
-      <DependentUpon>UC_Customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_AdminPanel.resx">
-      <DependentUpon>UC_AdminPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_POS_Customer.resx">
-      <DependentUpon>UC_POS_Customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_TaskCalendar.resx">
-      <DependentUpon>UC_TaskCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

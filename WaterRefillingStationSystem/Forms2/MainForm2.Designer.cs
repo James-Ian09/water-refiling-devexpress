@@ -260,6 +260,7 @@
             this.aciLogout.Name = "aciLogout";
             this.aciLogout.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aciLogout.Text = "Logout";
+            this.aciLogout.Click += new System.EventHandler(this.aciLogout_Click);
             // 
             // panelBody
             // 
@@ -282,6 +283,7 @@
             this.Name = "MainForm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelBody)).EndInit();
             this.ResumeLayout(false);

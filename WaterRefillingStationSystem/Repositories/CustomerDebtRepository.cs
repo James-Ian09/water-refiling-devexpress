@@ -35,16 +35,16 @@ namespace WaterRefillingStationSystem.Repositories
             }
         }
 
-        public void RemoveDebtRecord(string name, DateTime orderDate)
+        public void RemoveDebtRecord(int debtID)
         {
             using (var connection = new SQLiteConnection(_connectionString))
             {
                 connection.Open();
-                string query = "DELETE FROM CustomerDebt WHERE Name = @Name AND OrderDate = @OrderDate";
-                connection.Execute(query, new { Name = name, OrderDate = orderDate });
+                string query = "DELETE FROM CustomerDebt WHERE DebtID = @DebtID"; //using DebtID for deletion
+                connection.Execute(query, new { DebtID = debtID });
             }
         }
-        public void MarkDebtAsPaid(string customerName, DateTime orderDate)
+        public void MarkDebtAsPaid(string customerName, string orderDate)
         {
             using (var connection = new SQLiteConnection(_connectionString))
             {

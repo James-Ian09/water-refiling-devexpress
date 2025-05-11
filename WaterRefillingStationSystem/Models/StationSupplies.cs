@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace WaterRefillingStationSystem.Models
 {
-    public class CustomerDebt : SalesDetails
+    public class StationSupplies : SalesDetails
     {
-        public int DebtID { get; set; } //Primary Key
-        public string Name { get; set; }
-        public int Debt { get; set; }
+
     }
 }

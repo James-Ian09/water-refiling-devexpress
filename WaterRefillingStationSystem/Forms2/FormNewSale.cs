@@ -24,13 +24,15 @@ namespace WaterRefillingStationSystem.UserControls2
         private readonly ICustomerRepository _customerRepository;
         private readonly ISaleRepository _saleRepository;
         private readonly ICustomerDebtRepository _customerDebtRepository;
+        private UC_CustomerDebt _customerDebtControl;
         public FormNewSale(ICustomerRepository customerRepository, ISaleRepository saleRepository,
-                   ICustomerDebtRepository customerDebtRepository, GridControl customerDebtGridControl)
+                   ICustomerDebtRepository customerDebtRepository, UC_CustomerDebt customerDebtControl)
         {
             InitializeComponent();
             _customerRepository = customerRepository; //Save reference for customer lookups
             _saleRepository = saleRepository; //Save reference for sales operations
             _customerDebtRepository = customerDebtRepository;
+            _customerDebtControl = customerDebtControl;
 
             this.Load += FormNewSale_Load;
         }
@@ -67,8 +69,8 @@ namespace WaterRefillingStationSystem.UserControls2
             string itemName = comboBoxEditItemName.Text;
             int quantity = Convert.ToInt32(spinEditQuantity.Value);
             int unitPrice = Convert.ToInt32(textEditUnitPrice.Text);
-            DateTime? selectedDate = dateEditDateSelection.EditValue as DateTime?;
-            int totalPrice = quantity * unitPrice;
+            string selectedDate = Convert.ToDateTime(dateEditDateSelection.EditValue).ToString("yyyy-MM-dd");
+            int totalPrice = Convert.ToInt32(textEditTotalPrice.Text);
 
             // Validate inputs
             if (string.IsNullOrEmpty(orderType))
@@ -97,7 +99,7 @@ namespace WaterRefillingStationSystem.UserControls2
                 return;
             }
 
-            int? debt = null;
+            int debt = 0;
             int correctTotalPrice = totalPrice; // ✅ Start with default total price
             if (checkEditListInCustomerDebt.Checked)
             {
@@ -110,8 +112,7 @@ namespace WaterRefillingStationSystem.UserControls2
                     return;
                 }
 
-                debt = totalPrice;
-                correctTotalPrice = 0;
+                //debt = totalPrice;
 
                 CustomerDebt newDebtRecord = new CustomerDebt
                 {
@@ -120,17 +121,32 @@ namespace WaterRefillingStationSystem.UserControls2
                     ItemName = itemName,
                     Quantity = quantity,
                     UnitPrice = unitPrice,
-                    OrderDate = selectedDate.Value.Date.ToString("yyyy-MM-dd"),
+                    OrderDate = selectedDate,
                     Debt = totalPrice
                 };
 
                 _customerDebtRepository.AddDebtRecord(newDebtRecord); //Insert into DB
                 XtraMessageBox.Show("Sale added to Customer Debt records!");
+                if (_customerDebtControl != null)
+                {
+                    _customerDebtControl.RefreshDebtGrid();
+                }
+                ClearAllFields();
                 return; //Prevent database insertion into SalesDetails
             }
 
-            //If checkbox is NOT checked, saves the sale directly to db SaledDetails table
-            _saleRepository.AddSale(orderType, itemName, quantity, unitPrice, correctTotalPrice, debt, selectedDate.Value);
+            SalesDetails newSalesDetails = new SalesDetails
+            {
+                OrderType = orderType,
+                ItemName = itemName,
+                Quantity = quantity,
+                UnitPrice = unitPrice,
+                TotalPrice = totalPrice,
+                
+            };
+
+            //If checkbox is NOT checked, saves the sale directly to db SalesDetails table
+            _saleRepository.AddSale(orderType, itemName, quantity, unitPrice, totalPrice, selectedDate);
             XtraMessageBox.Show("Order successfully submitted!");
             ClearAllFields();
         }

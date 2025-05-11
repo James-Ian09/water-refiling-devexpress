@@ -56,11 +56,13 @@
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.objectDataSource2 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.objectDataSource3 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            this.objectDataSource4 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectDataSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -169,7 +171,7 @@
             this.xrTable2.SizeF = new System.Drawing.SizeF(651.9999F, 25F);
             this.xrTable2.StylePriority.UseFont = false;
             this.xrTable2.StylePriority.UseTextAlignment = false;
-            this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrTableRow2
             // 
@@ -276,6 +278,11 @@
             this.objectDataSource3.DataSource = typeof(WaterRefillingStationSystem.Models.SalesDetails);
             this.objectDataSource3.Name = "objectDataSource3";
             // 
+            // objectDataSource4
+            // 
+            this.objectDataSource4.DataSource = typeof(WaterRefillingStationSystem.Models.SalesDetails);
+            this.objectDataSource4.Name = "objectDataSource4";
+            // 
             // Report_Sales
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -285,8 +292,9 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.objectDataSource1,
             this.objectDataSource2,
-            this.objectDataSource3});
-            this.DataSource = this.objectDataSource3;
+            this.objectDataSource3,
+            this.objectDataSource4});
+            this.DataSource = this.objectDataSource4;
             this.FilterString = "[OrderDate] >= ?StartDate And [OrderDate] <= ?EndDate";
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(100F, 98F, 265.8333F, 100F);
@@ -304,6 +312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectDataSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -336,5 +345,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         private DevExpress.DataAccess.ObjectBinding.ObjectDataSource objectDataSource3;
+        private DevExpress.DataAccess.ObjectBinding.ObjectDataSource objectDataSource4;
     }
 }

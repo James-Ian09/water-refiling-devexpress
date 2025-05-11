@@ -81,7 +81,7 @@
             this.gridControlCustomerDebt.TabIndex = 8;
             this.gridControlCustomerDebt.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControlCustomerDebt.Click += new System.EventHandler(this.gridControlCustomerDebt_Click);
+            this.gridControlCustomerDebt.Load += new System.EventHandler(this.gridControlCustomerDebt_Load);
             // 
             // gridView1
             // 
@@ -99,6 +99,8 @@
             this.gridColumn8});
             this.gridView1.GridControl = this.gridControlCustomerDebt;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsCustomization.AllowColumnResizing = false;
             this.gridView1.OptionsView.RowAutoHeight = true;
             // 
             // gridColumn2
@@ -108,7 +110,7 @@
             this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(152)))), ((int)(((byte)(11)))));
             this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn2.Caption = "Customer Name";
-            this.gridColumn2.FieldName = "FullName";
+            this.gridColumn2.FieldName = "Name";
             this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -190,7 +192,7 @@
             this.gridColumn8.AppearanceHeader.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.gridColumn8.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn8.Caption = "Total Debt";
-            this.gridColumn8.FieldName = "TotalDebt";
+            this.gridColumn8.FieldName = "Debt";
             this.gridColumn8.MinWidth = 25;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;

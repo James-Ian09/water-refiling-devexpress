@@ -8,7 +8,7 @@ namespace WaterRefillingStationSystem.Interfaces
 {
     public interface ISaleRepository
     {
-        void AddSale(string orderType, string itemName, int quantity, int unitPrice, int totalPrice, int? debt, DateTime orderDate);
+        void AddSale(string orderType, string itemName, int quantity, int unitPrice, int totalPrice, string orderDate);
         List<(string FirstName, string MiddleName, string LastName)> GetCustomerNames();
         int GetCustomerIdByName(string firstName, string lastName);
     }

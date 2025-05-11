@@ -29,27 +29,28 @@ namespace WaterRefillingStationSystem.UserControls2
                     return;
                 }
 
-                // ✅ Retrieve selected debt record from the grid
+                //Retrieve selected debt record from the grid
                 CustomerDebt selectedDebt = new CustomerDebt
                 {
-                    Name = gridView.GetFocusedRowCellValue("Name").ToString(), // ✅ Name will NOT be saved in SalesDetails
+                    DebtID = Convert.ToInt32(gridView.GetFocusedRowCellValue("DebtID")),
+                    Name = gridView.GetFocusedRowCellValue("Name").ToString(), //Name will NOT be saved in SalesDetails
                     OrderType = gridView.GetFocusedRowCellValue("OrderType").ToString(),
                     ItemName = gridView.GetFocusedRowCellValue("ItemName").ToString(),
                     Quantity = Convert.ToInt32(gridView.GetFocusedRowCellValue("Quantity")),
                     UnitPrice = Convert.ToInt32(gridView.GetFocusedRowCellValue("UnitPrice")),
-                    OrderDate = Convert.ToString(gridView.GetFocusedRowCellValue("OrderDate")),
+                    OrderDate = Convert.ToDateTime(gridView.GetFocusedRowCellValue("OrderDate")).ToString("yyyy-MM-dd"),
                     Debt = Convert.ToInt32(gridView.GetFocusedRowCellValue("Debt"))
                 };
 
-                // ✅ Step 1: Move debt record to `SalesDetails`, excluding `Name`
+                //Step 1: Move debt record to `SalesDetails`, excluding `Name`
                 SalesDetails newSale = new SalesDetails
                 {
                     OrderType = selectedDebt.OrderType,
                     ItemName = selectedDebt.ItemName,
                     Quantity = selectedDebt.Quantity,
                     UnitPrice = selectedDebt.UnitPrice,
-                    TotalPrice = selectedDebt.Debt, // ✅ Debt now becomes TotalPrice
-                    OrderDate = DateTime.TryParse(selectedDebt.OrderDate, out DateTime parsedDate) ? parsedDate : DateTime.MinValue
+                    TotalPrice = selectedDebt.Debt, //Debt now becomes TotalPrice
+                    OrderDate = selectedDebt.OrderDate
                 };
 
                 _saleRepository.AddSale(
@@ -58,29 +59,33 @@ namespace WaterRefillingStationSystem.UserControls2
                     newSale.Quantity,
                     newSale.UnitPrice,
                     newSale.TotalPrice,
-                    null, // ✅ No debt anymore
                     newSale.OrderDate
                 );
 
-                // ✅ Step 2: Remove the record from CustomerDebt **using Name instead of DebtID**
-                _customerDebtRepository.RemoveDebtRecord(selectedDebt.Name, DateTime.ParseExact(selectedDebt.OrderDate, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture));
+                //Step 2: Remove the record from CustomerDebt **using Name instead of DebtID**
+                _customerDebtRepository.RemoveDebtRecord(selectedDebt.DebtID);
 
-                XtraMessageBox.Show($"Payment recorded for {selectedDebt.Name}. Debt moved to SalesDetails.");
 
-                // ✅ Step 3: Refresh the grid to reflect changes
+
+                XtraMessageBox.Show($"Payment recorded for {selectedDebt.Name}. Debt moved to Sales Report.");
+
+                //Step 3: Refresh the grid to reflect changes
                 RefreshDebtGrid();
             }
         }
 
-        private void RefreshDebtGrid()
+        public void RefreshDebtGrid()
         {
             gridControlCustomerDebt.DataSource = _customerDebtRepository.GetAllDebtRecords();
             gridControlCustomerDebt.RefreshDataSource();
         }
 
-        private void gridControlCustomerDebt_Click(object sender, EventArgs e)
+        private void gridControlCustomerDebt_Load(object sender, EventArgs e)
         {
+            var debtRecords = _customerDebtRepository.GetAllDebtRecords(); //Get data from the repository
 
+            gridControlCustomerDebt.DataSource = debtRecords;
+            gridControlCustomerDebt.RefreshDataSource(); //Ensure the grid updates
         }
     }
 }
