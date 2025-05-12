@@ -8,6 +8,6 @@ namespace WaterRefillingStationSystem.Models
 {
     public class StationSupplies : SalesDetails
     {
-
+        public int ItemID { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace WaterRefillingStationSystem.Interfaces
         StationSupplies GetSupplyByName(string itemName);
         void AddStock(string itemName, int quantityToAdd);
         void RemoveStock(string itemName, int quantityToRemove);
-        void UpdateStock(string itemName, int newQuantity);
+        void UpdateItem(StationSupplies item);
     }
 }
 

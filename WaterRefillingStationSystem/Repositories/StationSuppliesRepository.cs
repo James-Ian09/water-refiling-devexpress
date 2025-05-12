@@ -65,13 +65,17 @@ namespace WaterRefillingStationSystem.Repositories
             }
         }
 
-        public void UpdateStock(string itemName, int newQuantity)
+        public void UpdateItem(StationSupplies item)
         {
             using (var connection = new SQLiteConnection(_connectionString))
             {
                 connection.Open();
-                string query = @"UPDATE StationSupplies SET Quantity = @newQuantity WHERE ItemName = @itemName";
-                connection.Execute(query, new { itemName, newQuantity });
+                string query = @"UPDATE StationSupplies 
+                         SET ItemName = @ItemName, 
+                             UnitPrice = @UnitPrice, 
+                             Quantity = @Quantity 
+                         WHERE ItemID = @ItemID";
+                connection.Execute(query, item);
             }
         }
     }

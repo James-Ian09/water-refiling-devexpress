@@ -46,12 +46,13 @@ namespace WaterRefillingStationSystem.UserControls2
             }
 
             //Extract values from the selected row
-            string itemName = gridView1.GetRowCellValue(selectedRowHandle, "ItemName").ToString();
-            decimal unitPrice = Convert.ToDecimal(gridView1.GetRowCellValue(selectedRowHandle, "UnitPrice"));
+            int itemId = Convert.ToInt32(gridView1.GetRowCellValue(selectedRowHandle, "ItemID")); // Pass ItemID
+            string itemName = Convert.ToString(gridView1.GetRowCellValue(selectedRowHandle, "ItemName"));
+            int unitPrice = Convert.ToInt32(gridView1.GetRowCellValue(selectedRowHandle, "UnitPrice"));
             int availableStock = Convert.ToInt32(gridView1.GetRowCellValue(selectedRowHandle, "Quantity"));
 
             //Open FormStockManager with selected row data
-            FormStockManager stockManagerForm = new FormStockManager(_stationSuppliesRepository, itemName, unitPrice, availableStock);
+            FormStockManager stockManagerForm = new FormStockManager(_stationSuppliesRepository, itemId, itemName, unitPrice, availableStock);
             if (stockManagerForm.ShowDialog() == DialogResult.OK)
             {
                 LoadStationSuppliesData(); //Refresh grid after stock update
