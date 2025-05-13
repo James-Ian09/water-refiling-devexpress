@@ -100,12 +100,12 @@ namespace WaterRefillingStationSystem.UserControls2
             }
 
             int debt = 0;
-            int correctTotalPrice = totalPrice; // ✅ Start with default total price
+            int correctTotalPrice = totalPrice; //Start with default total price
             if (checkEditListInCustomerDebt.Checked)
             {
                 string fullName = comboBoxEditSelectCustomer.Text.Trim();
 
-                // ✅ Ensure fullName is valid before proceeding
+                //Ensure fullName is valid before proceeding
                 if (string.IsNullOrEmpty(fullName))
                 {
                     XtraMessageBox.Show("Please select a customer before proceeding.");
@@ -142,7 +142,7 @@ namespace WaterRefillingStationSystem.UserControls2
                 Quantity = quantity,
                 UnitPrice = unitPrice,
                 TotalPrice = totalPrice,
-                
+                OrderDate= selectedDate,
             };
 
             //If checkbox is NOT checked, saves the sale directly to db SalesDetails table
@@ -152,11 +152,11 @@ namespace WaterRefillingStationSystem.UserControls2
         }
         private void simpleButtonAddNewCustomer_Click(object sender, EventArgs e)
         {
-            ICustomerRepository customerRepository = new CustomerRepository(); // Create the correct repository
-            FormAddNewCustomer addCustomerForm = new FormAddNewCustomer(customerRepository); // Pass the right repository
+            ICustomerRepository customerRepository = new CustomerRepository(); //Create the correct repository
+            FormAddNewCustomer addCustomerForm = new FormAddNewCustomer(customerRepository); //Pass the right repository
             addCustomerForm.ShowDialog();
 
-            // Refresh the customer dropdown after a new customer is added
+            //Refresh the customer dropdown after a new customer is added
             LoadCustomerNames();
         }
         private void ClearAllFields()

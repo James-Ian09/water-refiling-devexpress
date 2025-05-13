@@ -120,6 +120,7 @@
             this.gridColumn4});
             this.gridView1.GridControl = this.gridControlStationSupplies;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             // 
             // gridColumn2
             // 
