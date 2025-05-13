@@ -24,14 +24,17 @@ namespace WaterRefillingStationSystem.UserControls2
         private readonly ICustomerRepository _customerRepository;
         private readonly ISaleRepository _saleRepository;
         private readonly ICustomerDebtRepository _customerDebtRepository;
+        private readonly IStationSuppliesRepository _stationSuppliesRepository;
         private UC_CustomerDebt _customerDebtControl;
         public FormNewSale(ICustomerRepository customerRepository, ISaleRepository saleRepository,
-                   ICustomerDebtRepository customerDebtRepository, UC_CustomerDebt customerDebtControl)
+                   ICustomerDebtRepository customerDebtRepository, IStationSuppliesRepository stationSuppliesRepository,
+                   UC_CustomerDebt customerDebtControl)
         {
             InitializeComponent();
-            _customerRepository = customerRepository; //Save reference for customer lookups
-            _saleRepository = saleRepository; //Save reference for sales operations
+            _customerRepository = customerRepository;
+            _saleRepository = saleRepository;
             _customerDebtRepository = customerDebtRepository;
+            _stationSuppliesRepository = stationSuppliesRepository;
             _customerDebtControl = customerDebtControl;
 
             this.Load += FormNewSale_Load;
@@ -39,6 +42,7 @@ namespace WaterRefillingStationSystem.UserControls2
         private void FormNewSale_Load(object sender, EventArgs e)
         {
             LoadCustomerNames();
+            LoadItemNames();
         }
         private void LoadCustomerNames()
         {
@@ -50,9 +54,26 @@ namespace WaterRefillingStationSystem.UserControls2
                 comboBoxEditSelectCustomer.Properties.Items.Add(customer);
             }
         }
-        private void comboBoxEditSelectOption_SelectedIndexChanged(object sender, EventArgs e)
+        private void LoadItemNames()
         {
+            // Create a list to store item names
+            List<string> itemNames = new List<string>();
 
+            // Retrieve all items from StationSupplies table
+            List<StationSupplies> supplies = _stationSuppliesRepository.GetAllSupplies();
+
+            // Loop through supplies and add each ItemName to the list
+            foreach (StationSupplies item in supplies)
+            {
+                itemNames.Add(item.ItemName);
+            }
+
+            // Clear the combo box and add items manually
+            comboBoxEditItemName.Properties.Items.Clear();
+            foreach (string name in itemNames)
+            {
+                comboBoxEditItemName.Properties.Items.Add(name);
+            }
         }
         //Event when "List in Customer Debt" checkbox is changed
         private void checkEditListInCustomerDebt_CheckedChanged(object sender, EventArgs e)
@@ -62,9 +83,42 @@ namespace WaterRefillingStationSystem.UserControls2
             comboBoxEditSelectCustomer.Enabled = isChecked;
             simpleButtonAddNewCustomer.Enabled = isChecked;
         }
+        private void comboBoxEditItemName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Get selected item name
+            string selectedItemName = comboBoxEditItemName.Text;
+
+            //Retrieve the corresponding UnitPrice from StationSupplies
+            List<StationSupplies> supplies = _stationSuppliesRepository.GetAllSupplies();
+
+            foreach (StationSupplies item in supplies)
+            {
+                if (item.ItemName == selectedItemName) //Find matching item
+                {
+                    textEditUnitPrice.Text = item.UnitPrice.ToString(); //Populate unit price
+                    break;
+                }
+            }
+        }
+        private void spinEditQuantity_EditValueChanged(object sender, EventArgs e)
+        {
+            //Get current values
+            int quantity = Convert.ToInt32(spinEditQuantity.Value);
+
+            //Convert unit price safely
+            int unitPrice = 0;
+            if (textEditUnitPrice.Text != "")
+            {
+                unitPrice = Convert.ToInt32(textEditUnitPrice.Text);
+            }
+
+            // Calculate total price
+            int totalPrice = unitPrice * quantity;
+            textEditTotalPrice.Text = totalPrice.ToString(); //Update total price
+        }
         private void simpleButtonSubmit_Click(object sender, EventArgs e)
         {
-            // Capture item details
+            //Capture item details
             string orderType = comboBoxEditSelectOption.Text;
             string itemName = comboBoxEditItemName.Text;
             int quantity = Convert.ToInt32(spinEditQuantity.Value);
@@ -184,7 +238,5 @@ namespace WaterRefillingStationSystem.UserControls2
         {
             this.Close();
         }
-
-        
     }
 }

@@ -50,10 +50,12 @@ namespace WaterRefillingStationSystem.Forms
                 return;
             }
 
-            ICustomerRepository customerRepository = new CustomerRepository();  //Add Customer Repository
+            ICustomerRepository customerRepository = new CustomerRepository();
             ISaleRepository saleRepository = new SaleRepository();
             ICustomerDebtRepository customerDebtRepository = new CustomerDebtRepository();
-            FormNewSale newSaleForm = new FormNewSale(customerRepository, saleRepository, customerDebtRepository, _ucCustomerDebt);
+            IStationSuppliesRepository stationSuppliesRepository = new StationSuppliesRepository();
+
+            FormNewSale newSaleForm = new FormNewSale(customerRepository, saleRepository, customerDebtRepository, stationSuppliesRepository, _ucCustomerDebt);
             newSaleForm.ShowDialog();
         }
 

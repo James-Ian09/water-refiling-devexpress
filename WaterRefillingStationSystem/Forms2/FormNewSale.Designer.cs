@@ -241,7 +241,6 @@
             this.comboBoxEditSelectOption.Size = new System.Drawing.Size(265, 38);
             this.comboBoxEditSelectOption.StyleController = this.layoutControl1;
             this.comboBoxEditSelectOption.TabIndex = 25;
-            this.comboBoxEditSelectOption.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditSelectOption_SelectedIndexChanged);
             // 
             // comboBoxEditSelectCustomer
             // 
@@ -360,6 +359,7 @@
             this.spinEditQuantity.Size = new System.Drawing.Size(186, 38);
             this.spinEditQuantity.StyleController = this.layoutControl1;
             this.spinEditQuantity.TabIndex = 10;
+            this.spinEditQuantity.EditValueChanged += new System.EventHandler(this.spinEditQuantity_EditValueChanged);
             // 
             // comboBoxEditItemName
             // 
@@ -378,6 +378,7 @@
             this.comboBoxEditItemName.Size = new System.Drawing.Size(259, 38);
             this.comboBoxEditItemName.StyleController = this.layoutControl1;
             this.comboBoxEditItemName.TabIndex = 9;
+            this.comboBoxEditItemName.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditItemName_SelectedIndexChanged);
             // 
             // emptySpaceItem11
             // 
