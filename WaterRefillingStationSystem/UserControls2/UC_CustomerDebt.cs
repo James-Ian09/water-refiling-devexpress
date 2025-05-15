@@ -38,7 +38,7 @@ namespace WaterRefillingStationSystem.UserControls2
                     ItemName = gridView.GetFocusedRowCellValue("ItemName").ToString(),
                     Quantity = Convert.ToInt32(gridView.GetFocusedRowCellValue("Quantity")),
                     UnitPrice = Convert.ToInt32(gridView.GetFocusedRowCellValue("UnitPrice")),
-                    OrderDate = Convert.ToDateTime(gridView.GetFocusedRowCellValue("OrderDate")).ToString("yyyy-MM-dd"),
+                    OrderDate = Convert.ToDateTime(gridView.GetFocusedRowCellValue("OrderDate")),
                     Debt = Convert.ToInt32(gridView.GetFocusedRowCellValue("Debt"))
                 };
 
@@ -86,6 +86,40 @@ namespace WaterRefillingStationSystem.UserControls2
 
             gridControlCustomerDebt.DataSource = debtRecords;
             gridControlCustomerDebt.RefreshDataSource(); //Ensure the grid updates
+        }
+
+        private void simpleButtonRemove_Click(object sender, EventArgs e)
+        {
+            if (gridControlCustomerDebt.MainView is DevExpress.XtraGrid.Views.Grid.GridView gridView)
+            {
+                if (gridView.SelectedRowsCount == 0)
+                {
+                    XtraMessageBox.Show("Please select a debt record to remove.");
+                    return;
+                }
+
+                //Get the selected row's DebtID
+                int selectedDebtID = Convert.ToInt32(gridView.GetFocusedRowCellValue("DebtID"));
+
+                // confirmation prompt
+                DialogResult result = XtraMessageBox.Show(
+                    "Are you sure you want to remove this debt record?",
+                    "Confirm Deletion",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    //Remove the record from the database
+                    _customerDebtRepository.RemoveDebtRecord(selectedDebtID);
+
+                    XtraMessageBox.Show("Debt record removed successfully.");
+
+                    //Refresh the grid to reflect changes
+                    RefreshDebtGrid();
+                }
+            }
         }
     }
 }

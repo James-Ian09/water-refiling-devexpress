@@ -68,6 +68,15 @@ namespace WaterRefillingStationSystem.Repositories
                 connection.Execute(insertQuery, customer);
             }
         }
+        public void RemoveCustomer(int customerID)
+        {
+            using (var connection = new SQLiteConnection(_connectionString))
+            {
+                connection.Open();
+                string query = "DELETE FROM Customers WHERE CustomerID = @CustomerID";
+                connection.Execute(query, new { CustomerID = customerID });
+            }
+        }
         public void UpdateCustomer(Customers customer)
         {
             using (var connection = new SQLiteConnection(_connectionString))

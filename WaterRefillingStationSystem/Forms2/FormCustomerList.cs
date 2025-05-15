@@ -113,5 +113,39 @@ namespace WaterRefillingStationSystem.Forms2
                 MessageBox.Show("Please select a row to edit.");
             }
         }
+
+        private void simpleButtonRemove_Click(object sender, EventArgs e)
+        {
+            if (gridControlCustomerList.MainView is DevExpress.XtraGrid.Views.Grid.GridView gridView)
+            {
+                if (gridView.SelectedRowsCount == 0)
+                {
+                    XtraMessageBox.Show("Please select a customer record to remove.");
+                    return;
+                }
+
+                //Get the selected row's CustomerID
+                int selectedCustomerID = Convert.ToInt32(gridView.GetFocusedRowCellValue("CustomerID"));
+
+                //Show confirmation prompt
+                DialogResult result = XtraMessageBox.Show(
+                    "Are you sure you want to remove this customer record?",
+                    "Confirm Deletion",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    //Remove the record from the database
+                    _customerRepository.RemoveCustomer(selectedCustomerID);
+
+                    XtraMessageBox.Show("Customer record removed successfully.");
+
+                    //Refresh the grid to reflect changes
+                    LoadCustomerData();
+                }
+            }
+        }
     }
 }

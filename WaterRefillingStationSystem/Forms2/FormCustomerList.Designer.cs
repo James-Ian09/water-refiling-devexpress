@@ -179,7 +179,7 @@
             // 
             // simpleButtonEdit
             // 
-            this.simpleButtonEdit.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonEdit.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.simpleButtonEdit.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.simpleButtonEdit.Appearance.Options.UseFont = true;
             this.simpleButtonEdit.Appearance.Options.UseForeColor = true;
@@ -243,7 +243,7 @@
             // 
             // simpleButtonRemove
             // 
-            this.simpleButtonRemove.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonRemove.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.simpleButtonRemove.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.simpleButtonRemove.Appearance.Options.UseFont = true;
             this.simpleButtonRemove.Appearance.Options.UseForeColor = true;
@@ -262,6 +262,7 @@
             this.simpleButtonRemove.StyleController = this.layoutControl1;
             this.simpleButtonRemove.TabIndex = 8;
             this.simpleButtonRemove.Text = "Remove";
+            this.simpleButtonRemove.Click += new System.EventHandler(this.simpleButtonRemove_Click);
             // 
             // layoutControlItem4
             // 

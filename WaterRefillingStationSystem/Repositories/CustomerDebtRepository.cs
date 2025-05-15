@@ -21,7 +21,18 @@ namespace WaterRefillingStationSystem.Repositories
                 connection.Open();
                 string query = @"INSERT INTO CustomerDebt (Name, OrderType, ItemName, Quantity, UnitPrice, OrderDate, Debt) 
                          VALUES (@Name, @OrderType, @ItemName, @Quantity, @UnitPrice, @OrderDate, @Debt)";
-                connection.Execute(query, debtRecord);
+                connection.Execute(query, new
+                {
+                    Name = debtRecord.Name,
+                    OrderType = debtRecord.OrderType,
+                    ItemName = debtRecord.ItemName,
+                    Quantity = debtRecord.Quantity,
+                    UnitPrice = debtRecord.UnitPrice,
+                    Debt = debtRecord.Debt,
+
+                    //Convert OrderDate to store only date without time
+                    OrderDate = debtRecord.OrderDate.ToString("yyyy-MM-dd")
+                });
             }
         }
 
@@ -50,13 +61,13 @@ namespace WaterRefillingStationSystem.Repositories
             {
                 connection.Open();
 
-                // ✅ Retrieve the debt record first
+                //Retrieve the debt record first
                 string selectQuery = "SELECT * FROM CustomerDebt WHERE Name = @Name AND OrderDate = @OrderDate";
                 var debtRecord = connection.QuerySingleOrDefault<CustomerDebt>(selectQuery, new { Name = customerName, OrderDate = orderDate });
 
                 if (debtRecord == null)
                 {
-                    throw new Exception("Debt record not found."); // ✅ Handle missing record
+                    throw new Exception("Debt record not found."); //Handle missing record
                 }
 
                 // ✅ Now debtRecord exists and can be used
@@ -72,7 +83,7 @@ namespace WaterRefillingStationSystem.Repositories
                     OrderDate = debtRecord.OrderDate
                 });
 
-                // ✅ Remove debt after marking it as paid
+                //Remove debt after marking it as paid
                 string deleteQuery = "DELETE FROM CustomerDebt WHERE Name = @Name AND OrderDate = @OrderDate";
                 connection.Execute(deleteQuery, new { Name = debtRecord.Name, OrderDate = debtRecord.OrderDate });
             }

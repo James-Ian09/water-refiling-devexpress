@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WaterRefillingStationSystem.Interfaces;
+using WaterRefillingStationSystem.Models;
 
 namespace WaterRefillingStationSystem.Repositories
 {
@@ -13,13 +14,13 @@ namespace WaterRefillingStationSystem.Repositories
     {
         private readonly string _connectionString = @"Data Source=C:\Users\krist\OneDrive\Desktop\OOP Programming\WaterRefillingStationSystem\WaterRefillingStationSystemDB.db;Version=3;";
 
-        public void AddSale(string orderType, string itemName, int quantity, int unitPrice, int totalPrice, string orderDate)
+        public void AddSale(string orderType, string itemName, int quantity, int unitPrice, int totalPrice, DateTime orderDate)
         {
             using (var connection = new SQLiteConnection(_connectionString))
             {
                 connection.Open();
                 string salesQuery = @"INSERT INTO SalesDetails (OrderType, ItemName, Quantity, UnitPrice, TotalPrice, OrderDate) 
-                                      VALUES (@OrderType, @ItemName, @Quantity, @UnitPrice, @TotalPrice, @OrderDate)";
+                              VALUES (@OrderType, @ItemName, @Quantity, @UnitPrice, @TotalPrice, @OrderDate)";
                 connection.Execute(salesQuery, new
                 {
                     OrderType = orderType,
@@ -27,7 +28,7 @@ namespace WaterRefillingStationSystem.Repositories
                     Quantity = quantity,
                     UnitPrice = unitPrice,
                     TotalPrice = totalPrice,
-                    OrderDate = orderDate
+                    OrderDate = orderDate.ToString("yyyy-MM-dd")
                 });
             }
         }

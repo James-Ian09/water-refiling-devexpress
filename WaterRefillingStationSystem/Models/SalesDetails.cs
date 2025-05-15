@@ -16,7 +16,7 @@ namespace WaterRefillingStationSystem.Models
         public int Quantity { get; set; }
         public int TotalPrice { get; set; }
         public string OrderType { get; set; }
-        public string OrderDate { get; set; }
+        public DateTime OrderDate { get; set; }
     }
 
 }

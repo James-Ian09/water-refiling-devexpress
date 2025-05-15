@@ -12,6 +12,7 @@ namespace WaterRefillingStationSystem.Interfaces
         List<Customers> GetAllCustomers();
         Customers GetCustomerById(int customerId);
         void AddCustomer(Customers customer);
+        void RemoveCustomer(int customerID);
         void UpdateCustomer(Customers customer);
         int GetCustomerIdByName(string firstName, string middleName, string lastName);
 

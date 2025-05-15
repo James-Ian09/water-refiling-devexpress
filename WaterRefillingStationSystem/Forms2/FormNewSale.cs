@@ -43,6 +43,7 @@ namespace WaterRefillingStationSystem.UserControls2
         {
             LoadCustomerNames();
             LoadItemNames();
+            SetLatestOrderDate();
         }
         private void LoadCustomerNames()
         {
@@ -74,6 +75,10 @@ namespace WaterRefillingStationSystem.UserControls2
             {
                 comboBoxEditItemName.Properties.Items.Add(name);
             }
+        }
+        private void SetLatestOrderDate()
+        {
+            labelOrderDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
         //Event when "List in Customer Debt" checkbox is changed
         private void checkEditListInCustomerDebt_CheckedChanged(object sender, EventArgs e)
@@ -118,12 +123,26 @@ namespace WaterRefillingStationSystem.UserControls2
         }
         private void simpleButtonSubmit_Click(object sender, EventArgs e)
         {
+            // Show confirmation message before proceeding
+            DialogResult result = XtraMessageBox.Show(
+                "Are you sure you want to proceed with this sale?",
+                "Confirm Sale",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            // If the user clicks "No", cancel the submission
+            if (result != DialogResult.Yes)
+            {
+                return;
+            }
+
             //Capture item details
             string orderType = comboBoxEditSelectOption.Text;
             string itemName = comboBoxEditItemName.Text;
             int quantity = Convert.ToInt32(spinEditQuantity.Value);
             int unitPrice = Convert.ToInt32(textEditUnitPrice.Text);
-            string selectedDate = Convert.ToDateTime(dateEditDateSelection.EditValue).ToString("yyyy-MM-dd");
+            DateTime selectedDate = DateTime.ParseExact(labelOrderDate.Text, "yyyy-MM-dd", null); //Convert before storing
             int totalPrice = Convert.ToInt32(textEditTotalPrice.Text);
 
             // Validate inputs
@@ -230,7 +249,6 @@ namespace WaterRefillingStationSystem.UserControls2
             spinEditQuantity.Value = 0;
             textEditUnitPrice.Text = string.Empty;
             textEditTotalPrice.Text = string.Empty;
-            dateEditDateSelection.Text = string.Empty;
 
             checkEditListInCustomerDebt.Checked = false;
         }
