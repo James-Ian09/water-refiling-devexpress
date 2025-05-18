@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStockManager));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.textEditItemName = new DevExpress.XtraEditors.TextEdit();
             this.textEditUnitPrice = new DevExpress.XtraEditors.TextEdit();
             this.simpleButtonCancel = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonSaveChanges = new DevExpress.XtraEditors.SimpleButton();
@@ -50,10 +51,10 @@
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textEditItemName = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditItemName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUnitPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAvailableStock.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -71,7 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditItemName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,25 +87,33 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(440, 380);
+            this.layoutControl1.Size = new System.Drawing.Size(451, 401);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // textEditItemName
+            // 
+            this.textEditItemName.Location = new System.Drawing.Point(81, 86);
+            this.textEditItemName.Name = "textEditItemName";
+            this.textEditItemName.Size = new System.Drawing.Size(269, 32);
+            this.textEditItemName.StyleController = this.layoutControl1;
+            this.textEditItemName.TabIndex = 16;
+            // 
             // textEditUnitPrice
             // 
-            this.textEditUnitPrice.Location = new System.Drawing.Point(80, 151);
+            this.textEditUnitPrice.Location = new System.Drawing.Point(81, 160);
             this.textEditUnitPrice.Name = "textEditUnitPrice";
             this.textEditUnitPrice.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEditUnitPrice.Properties.Appearance.Options.UseFont = true;
-            this.textEditUnitPrice.Size = new System.Drawing.Size(280, 38);
+            this.textEditUnitPrice.Size = new System.Drawing.Size(269, 36);
             this.textEditUnitPrice.StyleController = this.layoutControl1;
             this.textEditUnitPrice.TabIndex = 15;
             this.textEditUnitPrice.EditValueChanged += new System.EventHandler(this.textEditUnitPrice_EditValueChanged);
             // 
             // simpleButtonCancel
             // 
-            this.simpleButtonCancel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
-            this.simpleButtonCancel.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonCancel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(160)))), ((int)(((byte)(196)))));
+            this.simpleButtonCancel.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 10.01739F, System.Drawing.FontStyle.Bold);
             this.simpleButtonCancel.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.simpleButtonCancel.Appearance.Options.UseBackColor = true;
             this.simpleButtonCancel.Appearance.Options.UseFont = true;
@@ -123,9 +131,10 @@
             this.simpleButtonCancel.AppearancePressed.Options.UseFont = true;
             this.simpleButtonCancel.AppearancePressed.Options.UseForeColor = true;
             this.simpleButtonCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonCancel.ImageOptions.Image")));
-            this.simpleButtonCancel.Location = new System.Drawing.Point(146, 326);
+            this.simpleButtonCancel.Location = new System.Drawing.Point(143, 346);
             this.simpleButtonCancel.Name = "simpleButtonCancel";
-            this.simpleButtonCancel.Size = new System.Drawing.Size(146, 38);
+            this.simpleButtonCancel.Padding = new System.Windows.Forms.Padding(5);
+            this.simpleButtonCancel.Size = new System.Drawing.Size(158, 48);
             this.simpleButtonCancel.StyleController = this.layoutControl1;
             this.simpleButtonCancel.TabIndex = 13;
             this.simpleButtonCancel.Text = "Cancel";
@@ -133,8 +142,8 @@
             // 
             // simpleButtonSaveChanges
             // 
-            this.simpleButtonSaveChanges.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(128)))), ((int)(((byte)(172)))));
-            this.simpleButtonSaveChanges.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonSaveChanges.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(160)))), ((int)(((byte)(196)))));
+            this.simpleButtonSaveChanges.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 10.01739F, System.Drawing.FontStyle.Bold);
             this.simpleButtonSaveChanges.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.simpleButtonSaveChanges.Appearance.Options.UseBackColor = true;
             this.simpleButtonSaveChanges.Appearance.Options.UseFont = true;
@@ -152,9 +161,10 @@
             this.simpleButtonSaveChanges.AppearancePressed.Options.UseFont = true;
             this.simpleButtonSaveChanges.AppearancePressed.Options.UseForeColor = true;
             this.simpleButtonSaveChanges.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonSaveChanges.ImageOptions.Image")));
-            this.simpleButtonSaveChanges.Location = new System.Drawing.Point(146, 282);
+            this.simpleButtonSaveChanges.Location = new System.Drawing.Point(143, 292);
             this.simpleButtonSaveChanges.Name = "simpleButtonSaveChanges";
-            this.simpleButtonSaveChanges.Size = new System.Drawing.Size(146, 38);
+            this.simpleButtonSaveChanges.Padding = new System.Windows.Forms.Padding(5);
+            this.simpleButtonSaveChanges.Size = new System.Drawing.Size(158, 48);
             this.simpleButtonSaveChanges.StyleController = this.layoutControl1;
             this.simpleButtonSaveChanges.TabIndex = 12;
             this.simpleButtonSaveChanges.Text = "Save Changes";
@@ -162,11 +172,11 @@
             // 
             // textEditAvailableStock
             // 
-            this.textEditAvailableStock.Location = new System.Drawing.Point(80, 224);
+            this.textEditAvailableStock.Location = new System.Drawing.Point(81, 238);
             this.textEditAvailableStock.Name = "textEditAvailableStock";
             this.textEditAvailableStock.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textEditAvailableStock.Properties.Appearance.Options.UseFont = true;
-            this.textEditAvailableStock.Size = new System.Drawing.Size(280, 38);
+            this.textEditAvailableStock.Size = new System.Drawing.Size(269, 36);
             this.textEditAvailableStock.StyleController = this.layoutControl1;
             this.textEditAvailableStock.TabIndex = 7;
             this.textEditAvailableStock.EditValueChanged += new System.EventHandler(this.textEditAvailableStock_EditValueChanged);
@@ -177,9 +187,9 @@
             this.labelControl1.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(138, 16);
+            this.labelControl1.Location = new System.Drawing.Point(135, 16);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(162, 31);
+            this.labelControl1.Size = new System.Drawing.Size(157, 30);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Manage Stocks";
@@ -205,15 +215,15 @@
             this.layoutControlItem12,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(440, 380);
+            this.Root.Size = new System.Drawing.Size(431, 410);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.labelControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(122, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(119, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(168, 37);
+            this.layoutControlItem1.Size = new System.Drawing.Size(163, 36);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -222,146 +232,141 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(122, 37);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(119, 36);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(290, 0);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(282, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(124, 37);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(123, 36);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.89565F);
             this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem4.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem4.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem4.Control = this.textEditAvailableStock;
-            this.layoutControlItem4.Location = new System.Drawing.Point(64, 179);
+            this.layoutControlItem4.Location = new System.Drawing.Point(63, 188);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(286, 73);
+            this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlItem4.Size = new System.Drawing.Size(279, 78);
             this.layoutControlItem4.Text = "Available Stock";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(116, 23);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(125, 26);
             // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(64, 252);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(63, 266);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(286, 14);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(279, 10);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.simpleButtonSaveChanges;
-            this.layoutControlItem9.Location = new System.Drawing.Point(130, 266);
+            this.layoutControlItem9.Location = new System.Drawing.Point(127, 276);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(152, 44);
+            this.layoutControlItem9.Size = new System.Drawing.Size(164, 54);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.simpleButtonCancel;
-            this.layoutControlItem10.Location = new System.Drawing.Point(130, 310);
+            this.layoutControlItem10.Location = new System.Drawing.Point(127, 330);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(152, 44);
+            this.layoutControlItem10.Size = new System.Drawing.Size(164, 54);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
             // emptySpaceItem11
             // 
             this.emptySpaceItem11.AllowHotTrack = false;
-            this.emptySpaceItem11.Location = new System.Drawing.Point(0, 37);
+            this.emptySpaceItem11.Location = new System.Drawing.Point(0, 36);
             this.emptySpaceItem11.Name = "emptySpaceItem11";
-            this.emptySpaceItem11.Size = new System.Drawing.Size(64, 69);
+            this.emptySpaceItem11.Size = new System.Drawing.Size(63, 74);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem12
             // 
             this.emptySpaceItem12.AllowHotTrack = false;
-            this.emptySpaceItem12.Location = new System.Drawing.Point(350, 37);
+            this.emptySpaceItem12.Location = new System.Drawing.Point(342, 36);
             this.emptySpaceItem12.Name = "emptySpaceItem12";
-            this.emptySpaceItem12.Size = new System.Drawing.Size(64, 69);
+            this.emptySpaceItem12.Size = new System.Drawing.Size(63, 74);
             this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem13
             // 
             this.emptySpaceItem13.AllowHotTrack = false;
-            this.emptySpaceItem13.Location = new System.Drawing.Point(282, 266);
+            this.emptySpaceItem13.Location = new System.Drawing.Point(291, 276);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(68, 88);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(51, 108);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem14
             // 
             this.emptySpaceItem14.AllowHotTrack = false;
-            this.emptySpaceItem14.Location = new System.Drawing.Point(64, 266);
+            this.emptySpaceItem14.Location = new System.Drawing.Point(63, 276);
             this.emptySpaceItem14.Name = "emptySpaceItem14";
-            this.emptySpaceItem14.Size = new System.Drawing.Size(66, 88);
+            this.emptySpaceItem14.Size = new System.Drawing.Size(64, 108);
             this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 106);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 110);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(64, 248);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(63, 274);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(350, 106);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(342, 110);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(64, 248);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(63, 274);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem12
             // 
-            this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.89565F);
             this.layoutControlItem12.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem12.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem12.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem12.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem12.Control = this.textEditUnitPrice;
-            this.layoutControlItem12.Location = new System.Drawing.Point(64, 106);
+            this.layoutControlItem12.Location = new System.Drawing.Point(63, 110);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(286, 73);
+            this.layoutControlItem12.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlItem12.Size = new System.Drawing.Size(279, 78);
             this.layoutControlItem12.Text = "Unit Price";
             this.layoutControlItem12.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(116, 23);
-            // 
-            // textEditItemName
-            // 
-            this.textEditItemName.Location = new System.Drawing.Point(80, 82);
-            this.textEditItemName.Name = "textEditItemName";
-            this.textEditItemName.Size = new System.Drawing.Size(280, 34);
-            this.textEditItemName.StyleController = this.layoutControl1;
-            this.textEditItemName.TabIndex = 16;
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(125, 26);
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.89565F);
             this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.SteelBlue;
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem3.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem3.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem3.Control = this.textEditItemName;
-            this.layoutControlItem3.Location = new System.Drawing.Point(64, 37);
+            this.layoutControlItem3.Location = new System.Drawing.Point(63, 36);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(286, 69);
+            this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlItem3.Size = new System.Drawing.Size(279, 74);
             this.layoutControlItem3.Text = "Item Name";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(116, 23);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(125, 26);
             // 
             // FormStockManager
             // 
@@ -369,7 +374,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 380);
+            this.ClientSize = new System.Drawing.Size(451, 401);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("FormStockManager.IconOptions.LargeImage")));
@@ -379,6 +384,7 @@
             this.Text = "Stock Manager";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEditItemName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUnitPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAvailableStock.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -396,7 +402,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditItemName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
