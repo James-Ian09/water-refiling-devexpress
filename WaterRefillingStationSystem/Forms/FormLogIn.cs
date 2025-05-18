@@ -30,7 +30,7 @@ namespace WaterRefillingStationSystem.Forms2
 
         private void simpleButtonLogIn_Click(object sender, EventArgs e)
         {
-            MainForm2 mainForm2 = new MainForm2();
+            MainForm mainForm2 = new MainForm();
             mainForm2.ShowDialog();
             this.Hide();
         }

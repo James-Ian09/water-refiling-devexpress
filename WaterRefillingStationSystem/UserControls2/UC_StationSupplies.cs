@@ -46,7 +46,7 @@ namespace WaterRefillingStationSystem.UserControls2
             }
 
             //Extract values from the selected row
-            int itemId = Convert.ToInt32(gridView1.GetRowCellValue(selectedRowHandle, "ItemID")); // Pass ItemID
+            int itemId = Convert.ToInt32(gridView1.GetRowCellValue(selectedRowHandle, "ItemID")); //Pass ItemID
             string itemName = Convert.ToString(gridView1.GetRowCellValue(selectedRowHandle, "ItemName"));
             int unitPrice = Convert.ToInt32(gridView1.GetRowCellValue(selectedRowHandle, "UnitPrice"));
             int availableStock = Convert.ToInt32(gridView1.GetRowCellValue(selectedRowHandle, "Quantity"));
@@ -69,6 +69,11 @@ namespace WaterRefillingStationSystem.UserControls2
 
             var suppliesData = _stationSuppliesRepository.GetAllSupplies();
             gridControlStationSupplies.DataSource = suppliesData;
+        }
+        public void RefreshGrid()
+        {
+            gridControlStationSupplies.DataSource = _stationSuppliesRepository.GetAllSupplies();
+            gridControlStationSupplies.RefreshDataSource();
         }
     }
 }

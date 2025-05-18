@@ -56,24 +56,34 @@ namespace WaterRefillingStationSystem.Forms2
         {
             try
             {
-                //Retrieve updated values from input fields
+                // Retrieve updated values from input fields
                 string updatedName = textEditItemName.Text;
                 int updatedPrice = Convert.ToInt32(textEditUnitPrice.Text);
                 int updatedStock = Convert.ToInt32(textEditAvailableStock.Text);
 
-                //Create updated item instance
-                var updatedItem = new StationSupplies
+                // Get current stock from the database
+                var currentItem = _stationSuppliesRepository.GetSupplyByName(updatedName);
+                if (currentItem == null)
                 {
-                    ItemID = _itemId, // Ensure correct row is updated
-                    ItemName = updatedName,
-                    UnitPrice = updatedPrice,
-                    Quantity = updatedStock
-                };
+                    XtraMessageBox.Show("Item not found in inventory.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                //Update in database
-                _stationSuppliesRepository.UpdateItem(updatedItem);
+                int stockDifference = updatedStock - currentItem.Quantity;
 
-                //Notify UC_StationSupplies to refresh data
+                if (stockDifference < 0)
+                {
+                    //Remove stock when reducing quantity
+                    _stationSuppliesRepository.RemoveStock(updatedName, Math.Abs(stockDifference));
+                }
+                else if (stockDifference > 0)
+                {
+                    //Add stock when increasing quantity
+                    _stationSuppliesRepository.AddStock(updatedName, stockDifference);
+                }
+
+                XtraMessageBox.Show("Stock updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 DialogResult = DialogResult.OK;
                 Close();
             }

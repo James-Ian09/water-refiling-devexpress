@@ -60,22 +60,19 @@ namespace WaterRefillingStationSystem.Repositories
             using (var connection = new SQLiteConnection(_connectionString))
             {
                 connection.Open();
-                string query = @"UPDATE StationSupplies SET Quantity = Quantity - @quantityToRemove WHERE ItemName = @itemName";
-                connection.Execute(query, new { itemName, quantityToRemove });
-            }
-        }
 
-        public void UpdateItem(StationSupplies item)
-        {
-            using (var connection = new SQLiteConnection(_connectionString))
-            {
-                connection.Open();
-                string query = @"UPDATE StationSupplies 
-                         SET ItemName = @ItemName, 
-                             UnitPrice = @UnitPrice, 
-                             Quantity = @Quantity 
-                         WHERE ItemID = @ItemID";
-                connection.Execute(query, item);
+                //Check current stock before deducting
+                string checkStockQuery = "SELECT Quantity FROM StationSupplies WHERE ItemName = @itemName";
+                int currentStock = connection.ExecuteScalar<int>(checkStockQuery, new { itemName });
+
+                if (currentStock < quantityToRemove)
+                {
+                    throw new Exception("Insufficient stock available."); //Prevents over-selling
+                }
+
+                //Reduce stock only if sufficient
+                string updateStockQuery = @"UPDATE StationSupplies SET Quantity = Quantity - @quantityToRemove WHERE ItemName = @itemName";
+                connection.Execute(updateStockQuery, new { itemName, quantityToRemove });
             }
         }
     }

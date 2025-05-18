@@ -20,11 +20,12 @@ using WaterRefillingStationSystem.UserControls2;
 
 namespace WaterRefillingStationSystem.Forms
 {
-    public partial class MainForm2 : DevExpress.XtraEditors.XtraForm
+    public partial class MainForm : DevExpress.XtraEditors.XtraForm
     {
         private string _connectionString = @"Data Source=C:\Users\krist\OneDrive\Desktop\OOP Programming\WaterRefillingStationSystem\WaterRefillingStationSystemDB.db;Version=3;";
         private UC_CustomerDebt _ucCustomerDebt; // Declare as a class-level field
-        public MainForm2()
+        private UC_StationSupplies _ucStationSupplies; // Store reference
+        public MainForm()
         {
             InitializeComponent();
 
@@ -46,7 +47,7 @@ namespace WaterRefillingStationSystem.Forms
         {
             if (_ucCustomerDebt == null)
             {
-                XtraMessageBox.Show("Customer Debt section is not available. Please ensure it is initialized.");
+                XtraMessageBox.Show("Customer Debt section is not available.");
                 return;
             }
 
@@ -55,7 +56,16 @@ namespace WaterRefillingStationSystem.Forms
             ICustomerDebtRepository customerDebtRepository = new CustomerDebtRepository();
             IStationSuppliesRepository stationSuppliesRepository = new StationSuppliesRepository();
 
-            FormNewSale newSaleForm = new FormNewSale(customerRepository, saleRepository, customerDebtRepository, stationSuppliesRepository, _ucCustomerDebt);
+            //Pass the existing _ucStationSupplies instead of creating a new instance
+            FormNewSale newSaleForm = new FormNewSale(
+                customerRepository,
+                saleRepository,
+                customerDebtRepository,
+                stationSuppliesRepository,
+                _ucCustomerDebt,
+                _ucStationSupplies //This ensures refresh works correctly
+            );
+
             newSaleForm.ShowDialog();
         }
 
@@ -69,10 +79,14 @@ namespace WaterRefillingStationSystem.Forms
 
         private void aciStationSupplies_Click(object sender, EventArgs e)
         {
-            UC_StationSupplies uC_StationSupplies = new UC_StationSupplies();
+            if (_ucStationSupplies == null) //Ensure it's initialized only once
+            {
+                _ucStationSupplies = new UC_StationSupplies();
+            }
+
             panelBody.Controls.Clear();
-            uC_StationSupplies.Dock = DockStyle.Fill;
-            panelBody.Controls.Add(uC_StationSupplies);
+            _ucStationSupplies.Dock = DockStyle.Fill;
+            panelBody.Controls.Add(_ucStationSupplies);
         }
 
         private void aciCustomerList_Click(object sender, EventArgs e)

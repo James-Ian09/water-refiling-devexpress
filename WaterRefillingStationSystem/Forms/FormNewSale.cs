@@ -26,9 +26,10 @@ namespace WaterRefillingStationSystem.UserControls2
         private readonly ICustomerDebtRepository _customerDebtRepository;
         private readonly IStationSuppliesRepository _stationSuppliesRepository;
         private UC_CustomerDebt _customerDebtControl;
+        private UC_StationSupplies _stationSuppliesControl;
         public FormNewSale(ICustomerRepository customerRepository, ISaleRepository saleRepository,
                    ICustomerDebtRepository customerDebtRepository, IStationSuppliesRepository stationSuppliesRepository,
-                   UC_CustomerDebt customerDebtControl)
+                   UC_CustomerDebt customerDebtControl, UC_StationSupplies stationSuppliesControl)
         {
             InitializeComponent();
             _customerRepository = customerRepository;
@@ -38,6 +39,7 @@ namespace WaterRefillingStationSystem.UserControls2
             _customerDebtControl = customerDebtControl;
 
             this.Load += FormNewSale_Load;
+            _stationSuppliesControl = stationSuppliesControl;
         }
         private void FormNewSale_Load(object sender, EventArgs e)
         {
@@ -88,38 +90,67 @@ namespace WaterRefillingStationSystem.UserControls2
             comboBoxEditSelectCustomer.Enabled = isChecked;
             simpleButtonAddNewCustomer.Enabled = isChecked;
         }
-        private void comboBoxEditItemName_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxEditSelectOption_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Get selected item name
+            string orderType = comboBoxEditSelectOption.Text;
             string selectedItemName = comboBoxEditItemName.Text;
 
-            //Retrieve the corresponding UnitPrice from StationSupplies
-            List<StationSupplies> supplies = _stationSuppliesRepository.GetAllSupplies();
+            if (string.IsNullOrEmpty(selectedItemName)) return;
 
-            foreach (StationSupplies item in supplies)
+            StationSupplies item = _stationSuppliesRepository.GetSupplyByName(selectedItemName);
+            if (item == null) return;
+
+            int finalUnitPrice = item.UnitPrice;
+            if (orderType == "For Delivery")
             {
-                if (item.ItemName == selectedItemName) //Find matching item
-                {
-                    textEditUnitPrice.Text = item.UnitPrice.ToString(); //Populate unit price
-                    break;
-                }
+                finalUnitPrice += 5; //Apply delivery fee once
             }
+
+            textEditUnitPrice.Text = finalUnitPrice.ToString();
+
+            //Pass the unit price argument to UpdateTotalPrice
+            UpdateTotalPrice(finalUnitPrice);
+        }
+        private void comboBoxEditItemName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItemName = comboBoxEditItemName.Text;
+
+            if (string.IsNullOrEmpty(selectedItemName)) return;
+
+            //Retrieve UnitPrice from StationSupplies
+            StationSupplies item = _stationSuppliesRepository.GetSupplyByName(selectedItemName);
+
+            if (item == null) return;
+
+            //Set base price first
+            int baseUnitPrice = item.UnitPrice;
+
+            //Check if "For Delivery" was previously selected
+            if (comboBoxEditSelectOption.Text == "For Delivery")
+            {
+                baseUnitPrice += 5; //Apply delivery fee
+            }
+
+            textEditUnitPrice.Text = baseUnitPrice.ToString();
+            UpdateTotalPrice(baseUnitPrice);
+        }
+        private void UpdateTotalPrice(int unitPrice)
+        {
+            int quantity = Convert.ToInt32(spinEditQuantity.Value);
+
+            int totalPrice = unitPrice * quantity;
+            textEditTotalPrice.Text = totalPrice.ToString();
         }
         private void spinEditQuantity_EditValueChanged(object sender, EventArgs e)
         {
-            //Get current values
-            int quantity = Convert.ToInt32(spinEditQuantity.Value);
-
-            //Convert unit price safely
             int unitPrice = 0;
-            if (textEditUnitPrice.Text != "")
+            // Ensure textEditUnitPrice.Text is not null or empty before conversion
+            if (textEditUnitPrice.Text != null && textEditUnitPrice.Text != "")
             {
                 unitPrice = Convert.ToInt32(textEditUnitPrice.Text);
             }
-
-            // Calculate total price
-            int totalPrice = unitPrice * quantity;
-            textEditTotalPrice.Text = totalPrice.ToString(); //Update total price
+            // Pass the unit price argument
+            UpdateTotalPrice(unitPrice);
         }
         private void simpleButtonSubmit_Click(object sender, EventArgs e)
         {
@@ -132,10 +163,7 @@ namespace WaterRefillingStationSystem.UserControls2
             );
 
             // If the user clicks "No", cancel the submission
-            if (result != DialogResult.Yes)
-            {
-                return;
-            }
+            if (result != DialogResult.Yes) return;
 
             //Capture item details
             string orderType = comboBoxEditSelectOption.Text;
@@ -172,8 +200,44 @@ namespace WaterRefillingStationSystem.UserControls2
                 return;
             }
 
-            int debt = 0;
-            int correctTotalPrice = totalPrice; //Start with default total price
+            //Apply delivery fee if order is "For Delivery"
+            if (orderType == "For Delivery")
+            {
+                unitPrice += 5; //Add 5 to Unit Price
+            }
+
+            //Update available stock for the selected item
+            StationSupplies itemToUpdate = _stationSuppliesRepository.GetSupplyByName(itemName);
+
+            if (itemToUpdate == null)
+            {
+                XtraMessageBox.Show("Item not found.");
+                return;
+            }
+
+            if (itemToUpdate.Quantity < quantity)
+            {
+                XtraMessageBox.Show("Insufficient stock available for this item.");
+                return;
+            }
+
+            try
+            {
+                //Reduce stock using RemoveStock() method from StationSuppliesRepository
+                _stationSuppliesRepository.RemoveStock(itemName, quantity);
+                //Refresh the Station Supplies grid automatically
+                if (_stationSuppliesControl != null)
+                {
+                    _stationSuppliesControl.RefreshGrid();
+                } // Call refresh method from UC_StationSupplies
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message); //Alert user if stock is insufficient
+                return; //Prevent submission if stock is too low
+            }
+
+            int correctTotalPrice = unitPrice * quantity; //Ensure correct total price after delivery fee
             if (checkEditListInCustomerDebt.Checked)
             {
                 string fullName = comboBoxEditSelectCustomer.Text.Trim();

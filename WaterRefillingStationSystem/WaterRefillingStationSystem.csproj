@@ -107,53 +107,53 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms2\FormAddDispenserRent.cs">
+    <Compile Include="Forms\FormAddDispenserRent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms2\FormAddDispenserRent.Designer.cs">
+    <Compile Include="Forms\FormAddDispenserRent.Designer.cs">
       <DependentUpon>FormAddDispenserRent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms2\FormAddNewCustomer.cs">
+    <Compile Include="Forms\FormAddNewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms2\FormAddNewCustomer.Designer.cs">
+    <Compile Include="Forms\FormAddNewCustomer.Designer.cs">
       <DependentUpon>FormAddNewCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms2\FormAddNewItem.cs">
+    <Compile Include="Forms\FormAddNewItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms2\FormAddNewItem.Designer.cs">
+    <Compile Include="Forms\FormAddNewItem.Designer.cs">
       <DependentUpon>FormAddNewItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms2\FormCustomerList.cs">
+    <Compile Include="Forms\FormCustomerList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms2\FormCustomerList.Designer.cs">
+    <Compile Include="Forms\FormCustomerList.Designer.cs">
       <DependentUpon>FormCustomerList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms2\FormStockManager.cs">
+    <Compile Include="Forms\FormStockManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms2\FormStockManager.Designer.cs">
+    <Compile Include="Forms\FormStockManager.Designer.cs">
       <DependentUpon>FormStockManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms2\FormViewDetails.cs">
+    <Compile Include="Forms\FormViewDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms2\FormViewDetails.Designer.cs">
+    <Compile Include="Forms\FormViewDetails.Designer.cs">
       <DependentUpon>FormViewDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms2\FormLogIn.cs">
+    <Compile Include="Forms\FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms2\FormLogIn.Designer.cs">
+    <Compile Include="Forms\FormLogIn.Designer.cs">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms2\MainForm2.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms2\MainForm2.Designer.cs">
-      <DependentUpon>MainForm2.cs</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\ICustomerDebtRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
@@ -198,10 +198,10 @@
     <Compile Include="UserControls2\UC_StationSupplies.Designer.cs">
       <DependentUpon>UC_StationSupplies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms2\FormNewSale.cs">
+    <Compile Include="Forms\FormNewSale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms2\FormNewSale.Designer.cs">
+    <Compile Include="Forms\FormNewSale.Designer.cs">
       <DependentUpon>FormNewSale.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls2\UC_PendingOrders.cs">
@@ -219,29 +219,29 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms2\FormAddDispenserRent.resx">
+    <EmbeddedResource Include="Forms\FormAddDispenserRent.resx">
       <DependentUpon>FormAddDispenserRent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms2\FormAddNewCustomer.resx">
+    <EmbeddedResource Include="Forms\FormAddNewCustomer.resx">
       <DependentUpon>FormAddNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms2\FormAddNewItem.resx">
+    <EmbeddedResource Include="Forms\FormAddNewItem.resx">
       <DependentUpon>FormAddNewItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms2\FormCustomerList.resx">
+    <EmbeddedResource Include="Forms\FormCustomerList.resx">
       <DependentUpon>FormCustomerList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms2\FormLogIn.resx">
+    <EmbeddedResource Include="Forms\FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms2\FormStockManager.resx">
+    <EmbeddedResource Include="Forms\FormStockManager.resx">
       <DependentUpon>FormStockManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms2\FormViewDetails.resx">
+    <EmbeddedResource Include="Forms\FormViewDetails.resx">
       <DependentUpon>FormViewDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms2\MainForm2.resx">
-      <DependentUpon>MainForm2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -261,7 +261,7 @@
     <EmbeddedResource Include="UserControls2\UC_StationSupplies.resx">
       <DependentUpon>UC_StationSupplies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms2\FormNewSale.resx">
+    <EmbeddedResource Include="Forms\FormNewSale.resx">
       <DependentUpon>FormNewSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls2\UC_PendingOrders.resx">

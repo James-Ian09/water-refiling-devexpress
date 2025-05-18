@@ -246,6 +246,7 @@
             this.comboBoxEditSelectOption.Size = new System.Drawing.Size(261, 38);
             this.comboBoxEditSelectOption.StyleController = this.layoutControl1;
             this.comboBoxEditSelectOption.TabIndex = 25;
+            this.comboBoxEditSelectOption.SelectedIndexChanged += new System.EventHandler(this.comboBoxEditSelectOption_SelectedIndexChanged);
             // 
             // comboBoxEditSelectCustomer
             // 
