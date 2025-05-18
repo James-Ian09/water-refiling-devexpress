@@ -44,35 +44,43 @@ namespace WaterRefillingStationSystem.Repositories
                 return connection.QueryFirstOrDefault<StationSupplies>(query, new { ItemName = itemName });
             }
         }
-
-        public void AddStock(string itemName, int quantityToAdd)
-        {
-            using (var connection = new SQLiteConnection(_connectionString))
-            {
-                connection.Open();
-                string query = @"UPDATE StationSupplies SET Quantity = Quantity + @quantityToAdd WHERE ItemName = @itemName";
-                connection.Execute(query, new { itemName, quantityToAdd });
-            }
-        }
-
-        public void RemoveStock(string itemName, int quantityToRemove)
+        public void UpdateSupplyItem(string oldName, string newName, int quantityChange, int newPrice)
         {
             using (var connection = new SQLiteConnection(_connectionString))
             {
                 connection.Open();
 
-                //Check current stock before deducting
-                string checkStockQuery = "SELECT Quantity FROM StationSupplies WHERE ItemName = @itemName";
-                int currentStock = connection.ExecuteScalar<int>(checkStockQuery, new { itemName });
+                //Ensure item exists before updating
+                string checkItemQuery = "SELECT COUNT(*) FROM StationSupplies WHERE ItemName = @oldName";
+                int itemExists = connection.ExecuteScalar<int>(checkItemQuery, new { oldName });
 
-                if (currentStock < quantityToRemove)
+                if (itemExists == 0)
                 {
-                    throw new Exception("Insufficient stock available."); //Prevents over-selling
+                    throw new Exception("Item not found in inventory.");
                 }
 
-                //Reduce stock only if sufficient
-                string updateStockQuery = @"UPDATE StationSupplies SET Quantity = Quantity - @quantityToRemove WHERE ItemName = @itemName";
-                connection.Execute(updateStockQuery, new { itemName, quantityToRemove });
+                //Update item name first before modifying stock and price
+                if (oldName != newName)
+                {
+                    string renameQuery = "UPDATE StationSupplies SET ItemName = @newName WHERE ItemName = @oldName";
+                    connection.Execute(renameQuery, new { oldName, newName });
+                }
+
+                //Update stock and price after renaming the item
+                string updateQuery = @"UPDATE StationSupplies 
+                               SET Quantity = Quantity + @quantityChange, 
+                                   UnitPrice = @newPrice 
+                               WHERE ItemName = @newName"; //Now uses updated name
+                connection.Execute(updateQuery, new { newName, quantityChange, newPrice });
+            }
+        }
+        public void DeleteSupply(string itemName)
+        {
+            using (var connection = new SQLiteConnection(_connectionString))
+            {
+                connection.Open();
+                string query = "DELETE FROM StationSupplies WHERE ItemName = @itemName";
+                connection.Execute(query, new { itemName });
             }
         }
     }

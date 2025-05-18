@@ -42,6 +42,10 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleButtonRemove = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlStationSupplies)).BeginInit();
@@ -51,10 +55,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.simpleButtonRemove);
             this.layoutControl1.Controls.Add(this.simpleButtonManageStock);
             this.layoutControl1.Controls.Add(this.simpleButtonAddNewItem);
             this.layoutControl1.Controls.Add(this.gridControlStationSupplies);
@@ -73,7 +81,7 @@
             this.simpleButtonManageStock.Appearance.Options.UseFont = true;
             this.simpleButtonManageStock.Appearance.Options.UseForeColor = true;
             this.simpleButtonManageStock.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonManageStock.ImageOptions.Image")));
-            this.simpleButtonManageStock.Location = new System.Drawing.Point(877, 678);
+            this.simpleButtonManageStock.Location = new System.Drawing.Point(877, 634);
             this.simpleButtonManageStock.Name = "simpleButtonManageStock";
             this.simpleButtonManageStock.Size = new System.Drawing.Size(161, 38);
             this.simpleButtonManageStock.StyleController = this.layoutControl1;
@@ -88,7 +96,7 @@
             this.simpleButtonAddNewItem.Appearance.Options.UseFont = true;
             this.simpleButtonAddNewItem.Appearance.Options.UseForeColor = true;
             this.simpleButtonAddNewItem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonAddNewItem.ImageOptions.Image")));
-            this.simpleButtonAddNewItem.Location = new System.Drawing.Point(16, 678);
+            this.simpleButtonAddNewItem.Location = new System.Drawing.Point(16, 655);
             this.simpleButtonAddNewItem.Name = "simpleButtonAddNewItem";
             this.simpleButtonAddNewItem.Size = new System.Drawing.Size(168, 38);
             this.simpleButtonAddNewItem.StyleController = this.layoutControl1;
@@ -101,7 +109,7 @@
             this.gridControlStationSupplies.Location = new System.Drawing.Point(16, 16);
             this.gridControlStationSupplies.MainView = this.gridView1;
             this.gridControlStationSupplies.Name = "gridControlStationSupplies";
-            this.gridControlStationSupplies.Size = new System.Drawing.Size(1022, 656);
+            this.gridControlStationSupplies.Size = new System.Drawing.Size(1022, 612);
             this.gridControlStationSupplies.TabIndex = 4;
             this.gridControlStationSupplies.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -160,7 +168,10 @@
             this.layoutControlItem1,
             this.emptySpaceItem2,
             this.layoutControlItem2,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.emptySpaceItem1,
+            this.emptySpaceItem3});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1054, 732);
             this.Root.TextVisible = false;
@@ -170,22 +181,22 @@
             this.layoutControlItem1.Control = this.gridControlStationSupplies;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1028, 662);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1028, 618);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(174, 662);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(174, 618);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(687, 44);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(687, 88);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.simpleButtonAddNewItem;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 662);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 639);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(174, 44);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -194,11 +205,51 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.simpleButtonManageStock;
-            this.layoutControlItem3.Location = new System.Drawing.Point(861, 662);
+            this.layoutControlItem3.Location = new System.Drawing.Point(861, 618);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(167, 44);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
+            // 
+            // simpleButtonRemove
+            // 
+            this.simpleButtonRemove.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.simpleButtonRemove.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(133)))), ((int)(((byte)(116)))));
+            this.simpleButtonRemove.Appearance.Options.UseFont = true;
+            this.simpleButtonRemove.Appearance.Options.UseForeColor = true;
+            this.simpleButtonRemove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonRemove.ImageOptions.Image")));
+            this.simpleButtonRemove.Location = new System.Drawing.Point(877, 678);
+            this.simpleButtonRemove.Name = "simpleButtonRemove";
+            this.simpleButtonRemove.Size = new System.Drawing.Size(161, 38);
+            this.simpleButtonRemove.StyleController = this.layoutControl1;
+            this.simpleButtonRemove.TabIndex = 7;
+            this.simpleButtonRemove.Text = "Remove";
+            this.simpleButtonRemove.Click += new System.EventHandler(this.simpleButtonRemove_Click);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.simpleButtonRemove;
+            this.layoutControlItem4.Location = new System.Drawing.Point(861, 662);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(167, 44);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 618);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(174, 21);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 683);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(174, 23);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // UC_StationSupplies
             // 
@@ -216,6 +267,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,5 +289,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonRemove;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
     }
 }

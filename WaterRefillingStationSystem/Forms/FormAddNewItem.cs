@@ -57,5 +57,10 @@ namespace WaterRefillingStationSystem.Forms2
                 MessageBox.Show($"Error adding item: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void simpleButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

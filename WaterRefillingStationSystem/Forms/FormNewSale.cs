@@ -223,18 +223,21 @@ namespace WaterRefillingStationSystem.UserControls2
 
             try
             {
-                //Reduce stock using RemoveStock() method from StationSuppliesRepository
-                _stationSuppliesRepository.RemoveStock(itemName, quantity);
-                //Refresh the Station Supplies grid automatically
-                if (_stationSuppliesControl != null)
+                var currentItem = _stationSuppliesRepository.GetSupplyByName(itemName);
+                if (currentItem == null)
                 {
-                    _stationSuppliesControl.RefreshGrid();
-                } // Call refresh method from UC_StationSupplies
+                    XtraMessageBox.Show("Item not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                //Use currentItem.ItemName (old name) and itemName (new name)
+                _stationSuppliesRepository.UpdateSupplyItem(currentItem.ItemName, itemName, -quantity, currentItem.UnitPrice);
+                _stationSuppliesControl?.RefreshGrid();
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show(ex.Message); //Alert user if stock is insufficient
-                return; //Prevent submission if stock is too low
+                XtraMessageBox.Show(ex.Message);
+                return;
             }
 
             int correctTotalPrice = unitPrice * quantity; //Ensure correct total price after delivery fee

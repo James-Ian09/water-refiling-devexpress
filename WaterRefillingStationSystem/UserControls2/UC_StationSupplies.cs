@@ -75,5 +75,44 @@ namespace WaterRefillingStationSystem.UserControls2
             gridControlStationSupplies.DataSource = _stationSuppliesRepository.GetAllSupplies();
             gridControlStationSupplies.RefreshDataSource();
         }
+
+        private void simpleButtonRemove_Click(object sender, EventArgs e)
+        {
+            //Ensure a row is selected before proceeding
+            int selectedRowHandle = gridView1.FocusedRowHandle;
+            if (selectedRowHandle < 0)
+            {
+                XtraMessageBox.Show("Please select an item first!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            //Extract item information from the selected row
+            string itemName = Convert.ToString(gridView1.GetRowCellValue(selectedRowHandle, "ItemName"));
+
+            //Confirm deletion with the user
+            DialogResult result = XtraMessageBox.Show(
+                $"Are you sure you want to remove \"{itemName}\" from the inventory?",
+                "Confirm Deletion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result != DialogResult.Yes) return; //If "No" is selected, cancel deletion
+
+            try
+            {
+                //Remove the item from the database
+                _stationSuppliesRepository.DeleteSupply(itemName);
+
+                //Refresh GridView to reflect the deletion
+                LoadStationSuppliesData();
+
+                XtraMessageBox.Show($"\"{itemName}\" has been successfully removed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"Error removing item: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

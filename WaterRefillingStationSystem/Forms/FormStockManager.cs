@@ -57,12 +57,12 @@ namespace WaterRefillingStationSystem.Forms2
             try
             {
                 // Retrieve updated values from input fields
-                string updatedName = textEditItemName.Text;
+                string updatedName = textEditItemName.Text.Trim();
                 int updatedPrice = Convert.ToInt32(textEditUnitPrice.Text);
                 int updatedStock = Convert.ToInt32(textEditAvailableStock.Text);
 
                 // Get current stock from the database
-                var currentItem = _stationSuppliesRepository.GetSupplyByName(updatedName);
+                var currentItem = _stationSuppliesRepository.GetSupplyByName(_itemName);
                 if (currentItem == null)
                 {
                     XtraMessageBox.Show("Item not found in inventory.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -70,17 +70,9 @@ namespace WaterRefillingStationSystem.Forms2
                 }
 
                 int stockDifference = updatedStock - currentItem.Quantity;
-
-                if (stockDifference < 0)
-                {
-                    //Remove stock when reducing quantity
-                    _stationSuppliesRepository.RemoveStock(updatedName, Math.Abs(stockDifference));
-                }
-                else if (stockDifference > 0)
-                {
-                    //Add stock when increasing quantity
-                    _stationSuppliesRepository.AddStock(updatedName, stockDifference);
-                }
+                //update stock and unit price
+                _stationSuppliesRepository.UpdateSupplyItem(_itemName, updatedName, stockDifference, updatedPrice);
+                _itemName = updatedName;
 
                 XtraMessageBox.Show("Stock updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -95,7 +87,7 @@ namespace WaterRefillingStationSystem.Forms2
 
         private void simpleButtonCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
