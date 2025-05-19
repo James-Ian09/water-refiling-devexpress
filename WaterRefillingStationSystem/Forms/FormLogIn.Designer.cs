@@ -38,8 +38,8 @@
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.simpleButtonLogIn = new DevExpress.XtraEditors.SimpleButton();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.btnPasswordReveal = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -60,25 +60,25 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Sitka Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display", 20.03478F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(798, 149);
+            this.labelControl1.Location = new System.Drawing.Point(790, 147);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(44, 39);
+            this.labelControl1.Size = new System.Drawing.Size(51, 43);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "LSJ";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Sitka Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 18.15652F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(691, 182);
+            this.labelControl2.Location = new System.Drawing.Point(703, 182);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(256, 39);
+            this.labelControl2.Size = new System.Drawing.Size(233, 40);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "WATER REFILLNG ";
             // 
@@ -86,7 +86,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(733, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(730, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(174, 146);
             this.pictureBox2.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(189, 42);
+            this.textEdit1.Size = new System.Drawing.Size(189, 38);
             this.textEdit1.TabIndex = 4;
             // 
             // textEdit2
@@ -111,7 +111,7 @@
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(278, 42);
+            this.textEdit2.Size = new System.Drawing.Size(278, 38);
             this.textEdit2.TabIndex = 5;
             // 
             // textEdit3
@@ -122,7 +122,7 @@
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(277, 42);
+            this.textEdit3.Size = new System.Drawing.Size(277, 38);
             this.textEdit3.TabIndex = 4;
             // 
             // simpleButtonLogIn
@@ -164,28 +164,36 @@
             this.checkEdit1.Size = new System.Drawing.Size(166, 26);
             this.checkEdit1.TabIndex = 10;
             // 
-            // hyperlinkLabelControl1
-            // 
-            this.hyperlinkLabelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hyperlinkLabelControl1.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(840, 351);
-            this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
-            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(115, 20);
-            this.hyperlinkLabelControl1.TabIndex = 11;
-            this.hyperlinkLabelControl1.Text = "forget password?";
-            // 
             // btnPasswordReveal
             // 
             this.btnPasswordReveal.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(85)))));
+            this.btnPasswordReveal.Appearance.BorderColor = System.Drawing.Color.RosyBrown;
             this.btnPasswordReveal.Appearance.Options.UseBackColor = true;
+            this.btnPasswordReveal.Appearance.Options.UseBorderColor = true;
             this.btnPasswordReveal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPasswordReveal.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPasswordReveal.ImageOptions.SvgImage")));
-            this.btnPasswordReveal.Location = new System.Drawing.Point(962, 301);
+            this.btnPasswordReveal.Location = new System.Drawing.Point(962, 299);
             this.btnPasswordReveal.Name = "btnPasswordReveal";
             this.btnPasswordReveal.Size = new System.Drawing.Size(49, 39);
             this.btnPasswordReveal.TabIndex = 12;
             this.btnPasswordReveal.Click += new System.EventHandler(this.btnPasswordReveal_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(146)))), ((int)(((byte)(160)))));
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseBorderColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(146)))), ((int)(((byte)(160)))));
+            this.simpleButton1.AppearanceDisabled.Options.UseBackColor = true;
+            this.simpleButton1.Location = new System.Drawing.Point(830, 348);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(128, 28);
+            this.simpleButton1.TabIndex = 14;
+            this.simpleButton1.Text = "Forget password?";
             // 
             // FormLogIn
             // 
@@ -194,8 +202,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 459);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnPasswordReveal);
-            this.Controls.Add(this.hyperlinkLabelControl1);
             this.Controls.Add(this.checkEdit1);
             this.Controls.Add(this.simpleButtonLogIn);
             this.Controls.Add(this.textEdit2);
@@ -205,6 +213,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("FormLogIn.IconOptions.SvgImage")));
             this.Name = "FormLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -232,7 +241,7 @@
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.SimpleButton simpleButtonLogIn;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
-        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
         private DevExpress.XtraEditors.SimpleButton btnPasswordReveal;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

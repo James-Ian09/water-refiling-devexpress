@@ -95,7 +95,7 @@
             // 
             // textEditLastName
             // 
-            this.textEditLastName.Location = new System.Drawing.Point(80, 232);
+            this.textEditLastName.Location = new System.Drawing.Point(80, 258);
             this.textEditLastName.Name = "textEditLastName";
             this.textEditLastName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small", 8.765218F);
             this.textEditLastName.Properties.Appearance.Options.UseFont = true;
@@ -105,7 +105,7 @@
             // 
             // textEditMiddleName
             // 
-            this.textEditMiddleName.Location = new System.Drawing.Point(80, 152);
+            this.textEditMiddleName.Location = new System.Drawing.Point(80, 178);
             this.textEditMiddleName.Name = "textEditMiddleName";
             this.textEditMiddleName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small", 8.765218F);
             this.textEditMiddleName.Properties.Appearance.Options.UseFont = true;
@@ -116,7 +116,7 @@
             // simpleButtonCancel
             // 
             this.simpleButtonCancel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(160)))), ((int)(((byte)(196)))));
-            this.simpleButtonCancel.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonCancel.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 10.01739F, System.Drawing.FontStyle.Bold);
             this.simpleButtonCancel.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.simpleButtonCancel.Appearance.Options.UseBackColor = true;
             this.simpleButtonCancel.Appearance.Options.UseFont = true;
@@ -134,7 +134,7 @@
             this.simpleButtonCancel.AppearancePressed.Options.UseFont = true;
             this.simpleButtonCancel.AppearancePressed.Options.UseForeColor = true;
             this.simpleButtonCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonCancel.ImageOptions.Image")));
-            this.simpleButtonCancel.Location = new System.Drawing.Point(146, 483);
+            this.simpleButtonCancel.Location = new System.Drawing.Point(146, 509);
             this.simpleButtonCancel.Name = "simpleButtonCancel";
             this.simpleButtonCancel.Size = new System.Drawing.Size(154, 38);
             this.simpleButtonCancel.StyleController = this.layoutControl1;
@@ -145,7 +145,7 @@
             // simpleButtonSave
             // 
             this.simpleButtonSave.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(160)))), ((int)(((byte)(196)))));
-            this.simpleButtonSave.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.26957F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButtonSave.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 10.01739F, System.Drawing.FontStyle.Bold);
             this.simpleButtonSave.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.simpleButtonSave.Appearance.Options.UseBackColor = true;
             this.simpleButtonSave.Appearance.Options.UseFont = true;
@@ -163,7 +163,7 @@
             this.simpleButtonSave.AppearancePressed.Options.UseFont = true;
             this.simpleButtonSave.AppearancePressed.Options.UseForeColor = true;
             this.simpleButtonSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonSave.ImageOptions.Image")));
-            this.simpleButtonSave.Location = new System.Drawing.Point(146, 439);
+            this.simpleButtonSave.Location = new System.Drawing.Point(146, 465);
             this.simpleButtonSave.Name = "simpleButtonSave";
             this.simpleButtonSave.Size = new System.Drawing.Size(154, 38);
             this.simpleButtonSave.StyleController = this.layoutControl1;
@@ -173,7 +173,7 @@
             // 
             // textEditAddress
             // 
-            this.textEditAddress.Location = new System.Drawing.Point(80, 390);
+            this.textEditAddress.Location = new System.Drawing.Point(80, 416);
             this.textEditAddress.Name = "textEditAddress";
             this.textEditAddress.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small", 8.765218F);
             this.textEditAddress.Properties.Appearance.Options.UseFont = true;
@@ -183,7 +183,7 @@
             // 
             // textEditContactNumber
             // 
-            this.textEditContactNumber.Location = new System.Drawing.Point(80, 312);
+            this.textEditContactNumber.Location = new System.Drawing.Point(80, 338);
             this.textEditContactNumber.Name = "textEditContactNumber";
             this.textEditContactNumber.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small", 8.765218F);
             this.textEditContactNumber.Properties.Appearance.Options.UseFont = true;
@@ -193,7 +193,7 @@
             // 
             // textEditFirstName
             // 
-            this.textEditFirstName.Location = new System.Drawing.Point(80, 72);
+            this.textEditFirstName.Location = new System.Drawing.Point(80, 98);
             this.textEditFirstName.Name = "textEditFirstName";
             this.textEditFirstName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Variable Small", 8.765218F);
             this.textEditFirstName.Properties.Appearance.Options.UseFont = true;
